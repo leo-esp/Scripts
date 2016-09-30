@@ -1,0 +1,71 @@
+{
+	/*
+	 // Place your snippets for ColdFusion Component here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+	 // Example:
+	 "Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+	"wlog": {
+		"prefix": "wlog",
+		"body": "writeLog(file='hg', text='$1');",
+		"description": "create a coldfusion log"
+	},
+	"cold-service-func": {
+		"prefix": "remote",
+		"body": [
+			"remote struct function $1() returnformat='json'",
+			"{",
+			"\ttry",
+			"\t{",
+			"\t\tresult['result'] = this.controller.$1();",
+			"\t\tresult['success'] = true;",
+			"\t}",
+			"\tcatch(any e)",
+			"\t{",
+			"\t\tresult['success'] = false;",
+			"\t\tresult['stacktrace'] = e.stacktrace;",
+			"\t\tresult['errormessage'] = e.message;",
+			"\t\tresult['errorcode'] = e.errorcode;",
+			"\t\tresult['detail'] = e.detail;",
+			"\t}",
+			"\treturn result;",
+			"}"
+		],
+		"description": "create a default service function"
+	},
+	"cold-controller-dao-function": {
+		"prefix": "public",
+		"body": [
+			"public $1 function $2()",
+			"{",
+			"\treturn this.dao.$2();",
+			"};"
+		],
+		"description": "Create a function to call this.DAO"
+	},
+	"cold-controller-service-function": {
+		"prefix": "pubreq",
+		"body": [
+			"public $1 function $2()",
+			"{",
+			"\tvar s = new http(url=$3, method='POST', timeout=10);",
+			"\ts.addParam(name='method', value='$2', type='formField');\n",
+			"\tvar result = deserializeJSON(s.send().getPrefix().fileContent);\n",
+			"\tif (!result.success)",
+			"\t{",
+			"\t\tthrow(message=result.errormessage);"	,
+			"\t}\n",
+			"\treturn result;",
+			"}"
+		],
+		"description": "Create a function to call come coldfusion Service"
+	}
+}

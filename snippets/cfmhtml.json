@@ -1,0 +1,1797 @@
+{
+	/*
+	 // Place your snippets for ColdFusion Markup here. Each snippet is defined under a snippet name and has a prefix, body and 
+	 // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	 // $1, $2 for tab stops, ${id} and ${id:label} and ${1:label} for variables. Variables with the same id are connected.
+	 // Example:
+	 "Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	}
+*/
+	"wlog": {
+		"prefix": "wlog",
+		"body": "writeLog(file='hg', text='$1');",
+		"description": "create a coldfusion log"
+	},
+	"func": {
+		"prefix": "func",
+		"body": [
+			"function (${param}) {  }"
+		],
+		"description": "An anonymous function."
+	},
+	"jqAfter": {
+		"prefix": "jqAfter",
+		"body": [
+			"$(${selector}).after(${content});"
+		],
+		"description": "Insert content, specified by the parameter, after each element in the set of matched elements."
+	},
+	"jqAjax": {
+		"prefix": "jqAjax",
+		"body": [
+			"$.ajax({",
+			"\ttype: \"${method}\",",
+			"\turl: \"${url}\",",
+			"\tdata: \"${data}\",",
+			"\tdataType: \"${dataType}\",",
+			"\tsuccess: function (response) {",
+			"\t\t$0",
+			"\t}",
+			"});"
+		],
+		"description": "Perform an asynchronous HTTP (Ajax) request."
+	},
+	"jqAjaxAspNetWebService": {
+		"prefix": "jqAjaxAspNetWebService",
+		"body": [
+			"$.ajax({",
+			"\ttype: \"POST\",",
+			"\tcontentType: \"application/json; charset=utf-8\",",
+			"\tdataType: \"${dataType}\",",
+			"\turl: \"${url}\",",
+			"\tdata: \"${data}\",",
+			"\tsuccess: function (response) {",
+			"\t\t$0",
+			"\t}",
+			"});"
+		],
+		"description": "Perform an asynchronous HTTP (Ajax) request to a ASP.NET web service."
+	},
+	"jqAppend": {
+		"prefix": "jqAppend",
+		"body": [
+			"$(${selector}).append(${content});"
+		],
+		"description": "Insert content, specified by the parameter, to the end of each element in the set of matched elements."
+	},
+	"jqAppendTo": {
+		"prefix": "jqAppendTo",
+		"body": [
+			"$(${content}).appendTo(${selector});"
+		],
+		"description": "Insert every element in the set of matched elements to the end of the target."
+	},
+	"jqAttrGet": {
+		"prefix": "jqAttrGet",
+		"body": [
+			"$(${selector}).attr(${attributeName});"
+		],
+		"description": "Get the value of an attribute for the first element in the set of matched elements."
+	},
+	"jqAttrRemove": {
+		"prefix": "jqAttrRemove",
+		"body": [
+			"$(${selector}).removeAttr(${attributeName});"
+		],
+		"description": "Remove an attribute from each element in the set of matched elements."
+	},
+	"jqAttrSet": {
+		"prefix": "jqAttrSet",
+		"body": [
+			"$(${selector}).attr(${attributeName}, ${value});"
+		],
+		"description": "Set one or more attributes for the set of matched elements."
+	},
+	"jqAttrSetFn": {
+		"prefix": "jqAttrSetFn",
+		"body": [
+			"$(${selector}).attr(${attributeName}, function (index, attr) { ",
+			"\t$0 ",
+			"});"
+		],
+		"description": "Set one or more attributes for the set of matched elements."
+	},
+	"jqAttrSetObj": {
+		"prefix": "jqAttrSetObj",
+		"body": [
+			"$(${selector}).attr({",
+			"\t${name}: ${value}",
+			"\t$0",
+			"});"
+		],
+		"description": "Set one or more attributes for the set of matched elements."
+	},
+	"jqBefore": {
+		"prefix": "jqBefore",
+		"body": [
+			"$(${selector}).before(${content});"
+		],
+		"description": "Insert content, specified by the parameter, before each element in the set of matched elements."
+	},
+	"jqBind": {
+		"prefix": "jqBind",
+		"body": [
+			"$(${selector}).bind(${eventType}, function (e) {",
+			"\t$0",
+			"});"
+		],
+		"description": "Attach a handler to an event for the elements."
+	},
+	"jqBindWithData": {
+		"prefix": "jqBindWithData",
+		"body": [
+			"$(${selector}).bind(${eventType}, ${eventData}, function (e) {",
+			"\t$0",
+			"});"
+		],
+		"description": "Attach a handler to an event for the elements."
+	},
+	"jqBlur": {
+		"prefix": "jqBlur",
+		"body": [
+			"$(${selector}).blur(function (e) { ",
+			"\te.preventDefault();",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"blur\" JavaScript event, or trigger that event on an element."
+	},
+	"jqChange": {
+		"prefix": "jqChange",
+		"body": [
+			"$(${selector}).change(function (e) { ",
+			"\te.preventDefault();",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"change\" JavaScript event, or trigger that event on an element."
+	},
+	"jqClassAdd": {
+		"prefix": "jqClassAdd",
+		"body": [
+			"$(${selector}).addClass(${className});"
+		],
+		"description": "Adds the specified class(es) to each of the set of matched elements."
+	},
+	"jqClassRemove": {
+		"prefix": "jqClassRemove",
+		"body": [
+			"$(${selector}).removeClass(${className});"
+		],
+		"description": "Remove a single class, multiple classes, or all classes from each element in the set of matched elements."
+	},
+	"jqClassToggle": {
+		"prefix": "jqClassToggle",
+		"body": [
+			"$(${selector}).toggleClass(${className});"
+		],
+		"description": "Add or remove one or more classes from each element in the set of matched elements, depending on either the class\u0027s presence."
+	},
+	"jqClassToggleSwitch": {
+		"prefix": "jqClassToggleSwitch",
+		"body": [
+			"$(${selector}).toggleClass(${className}, ${switch});"
+		],
+		"description": "Add or remove one or more classes from each element in the set of matched elements, depending on either the class\u0027s presence or the value of the switch argument."
+	},
+	"jqClick": {
+		"prefix": "jqClick",
+		"body": [
+			"$(${selector}).click(function (e) { ",
+			"\te.preventDefault();",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"click\" JavaScript event, or trigger that event on an element."
+	},
+	"jqClone": {
+		"prefix": "jqClone",
+		"body": [
+			"$(${selector}).clone();"
+		],
+		"description": "Create a deep copy of the set of matched elements."
+	},
+	"jqCloneWithEvents": {
+		"prefix": "jqCloneWithEvents",
+		"body": [
+			"$(${selector}).clone(true);"
+		],
+		"description": "Create a deep copy of the set of matched elements."
+	},
+	"jqCssGet": {
+		"prefix": "jqCssGet",
+		"body": [
+			"$(${selector}).css(${propertyName});"
+		],
+		"description": "Get the computed style properties for the first element in the set of matched elements."
+	},
+	"jqCssSet": {
+		"prefix": "jqCssSet",
+		"body": [
+			"$(${selector}).css(${propertyName}, ${value});"
+		],
+		"description": "Set one or more CSS properties for the set of matched elements."
+	},
+	"jqCssSetObj": {
+		"prefix": "jqCssSetObj",
+		"body": [
+			"$(${selector}).css({",
+			"\t${propertyName}: ${value}",
+			"\t$0",
+			"});"
+		],
+		"description": "Set one or more CSS properties for the set of matched elements."
+	},
+	"jqDataGet": {
+		"prefix": "jqDataGet",
+		"body": [
+			"$(${selector}).data(${key});"
+		],
+		"description": "Return the value at the named data store for the first element in the jQuery collection, as set by data(name, value) or by an HTML5 data-* attribute."
+	},
+	"jqDataRemove": {
+		"prefix": "jqDataRemove",
+		"body": [
+			"$(${selector}).removeData(${element});"
+		],
+		"description": "Remove a previously-stored piece of data."
+	},
+	"jqDataSet": {
+		"prefix": "jqDataSet",
+		"body": [
+			"$(${selector}).data(${key}, ${value});"
+		],
+		"description": "Store arbitrary data associated with the matched elements."
+	},
+	"jqDataSetObj": {
+		"prefix": "jqDataSetObj",
+		"body": [
+			"$(${selector}).data({",
+			"\t${key}: ${value}",
+			"\t$0",
+			"});"
+		],
+		"description": "Store arbitrary data associated with the matched elements."
+	},
+	"jqDie": {
+		"prefix": "jqDie",
+		"body": [
+			"$(${selector}).die(${eventType});"
+		],
+		"description": "Remove event handlers previously attached using .live() from the elements."
+	},
+	"jqDieAll": {
+		"prefix": "jqDieAll",
+		"body": [
+			"$(${selector}).die();"
+		],
+		"description": "Remove event handlers previously attached using .live() from the elements."
+	},
+	"jqDieFn": {
+		"prefix": "jqDieFn",
+		"body": [
+			"$(${selector}).die(${eventType}, ${handler});"
+		],
+		"description": "Remove event handlers previously attached using .live() from the elements."
+	},
+	"jqDocReady": {
+		"prefix": "jqDocReady",
+		"body": [
+			"$(document).ready(function () {",
+			"\t$0",
+			"});"
+		],
+		"description": "Function to execute when the DOM is fully loaded."
+	},
+	"jqDocReadyShort": {
+		"prefix": "jqDocReadyShort",
+		"body": [
+			"$(function () {",
+			"\t$0",
+			"});"
+		],
+		"description": "Function to execute when the DOM is fully loaded."
+	},
+	"jqEach": {
+		"prefix": "jqEach",
+		"body": [
+			"$.each(${collection}, function (indexInArray, valueOfElement) { ",
+			"\t$0 ",
+			"});"
+		],
+		"description": "A generic iterator function, which can be used to seamlessly iterate over both objects and arrays. Arrays and array-like objects with a length property (such as a function\u0027s arguments object) are iterated by numeric index, from 0 to length-1. Other objects are iterated via their named properties."
+	},
+	"jqEachElement": {
+		"prefix": "jqEachElement",
+		"body": [
+			"$(${selector}).each(function (index, element) {",
+			"\t// element == this",
+			"\t$0",
+			"});"
+		],
+		"description": "Iterate over a jQuery object, executing a function for each matched element. "
+	},
+	"jqEmpty": {
+		"prefix": "jqEmpty",
+		"body": [
+			"$(${selector}).empty();"
+		],
+		"description": "Remove all child nodes of the set of matched elements from the DOM."
+	},
+	"jqFadeIn": {
+		"prefix": "jqFadeIn",
+		"body": [
+			"$(${selector}).fadeIn();"
+		],
+		"description": "Display the matched elements by fading them to opaque."
+	},
+	"jqFadeInFull": {
+		"prefix": "jqFadeInFull",
+		"body": [
+			"$(${selector}).fadeIn(${duration}, function () {",
+			"\t$0",
+			"});"
+		],
+		"description": "Display the matched elements by fading them to opaque."
+	},
+	"jqFadeOut": {
+		"prefix": "jqFadeOut",
+		"body": [
+			"$(${selector}).fadeOut();"
+		],
+		"description": "Hide the matched elements by fading them to transparent."
+	},
+	"jqFadeOutFull": {
+		"prefix": "jqFadeOutFull",
+		"body": [
+			"$(${selector}).fadeOut(${duration}, function () {",
+			"\t$0",
+			"});"
+		],
+		"description": "Hide the matched elements by fading them to transparent."
+	},
+	"jqFadeTo": {
+		"prefix": "jqFadeTo",
+		"body": [
+			"$(${selector}).fadeTo(${duration}, ${opacity});"
+		],
+		"description": "Adjust the opacity of the matched elements."
+	},
+	"jqFadeToFull": {
+		"prefix": "jqFadeToFull",
+		"body": [
+			"$(${selector}).fadeTo(${duration}, ${opacity}, function () {",
+			"\t$0",
+			"});"
+		],
+		"description": "Adjust the opacity of the matched elements."
+	},
+	"jqFind": {
+		"prefix": "jqFind",
+		"body": [
+			"$(${selector}).find(${selector2});"
+		],
+		"description": "Get the descendants of each element in the current set of matched elements, filtered by a selector, jQuery object, or element."
+	},
+	"jqFocus": {
+		"prefix": "jqFocus",
+		"body": [
+			"$(${selector}).focus(function (e) { ",
+			"\te.preventDefault();",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"focus\" JavaScript event, or trigger that event on an element."
+	},
+	"jqGet": {
+		"prefix": "jqGet",
+		"body": [
+			"$.get(\"${url}\", ${data},",
+			"\tfunction (data, textStatus, jqXHR) {",
+			"\t\t$0",
+			"\t},",
+			"\t\"${dataType}\"",
+			");"
+		],
+		"description": "Load data from the server using a HTTP GET request."
+	},
+	"jqGetJson": {
+		"prefix": "jqGetJson",
+		"body": [
+			"$.getJSON(\"${url}\", ${data},",
+			"\tfunction (data, textStatus, jqXHR) {",
+			"\t\t$0",
+			"\t}",
+			");"
+		],
+		"description": "Load JSON-encoded data from the server using a GET HTTP request."
+	},
+	"jqGetScript": {
+		"prefix": "jqGetScript",
+		"body": [
+			"$.getScript(\"${url}\", function (script, textStatus, jqXHR) {",
+			"\t$0",
+			"});"
+		],
+		"description": "Load a JavaScript file from the server using a GET HTTP request, then execute it."
+	},
+	"jqHasClass": {
+		"prefix": "jqHasClass",
+		"body": [
+			"$(${selector}).hasClass(${className});"
+		],
+		"description": "Determine whether any of the matched elements are assigned the given class."
+	},
+	"jqHeightGet": {
+		"prefix": "jqHeightGet",
+		"body": [
+			"$(${selector}).height();"
+		],
+		"description": "Get the current computed height for the first element in the set of matched elements."
+	},
+	"jqHeightSet": {
+		"prefix": "jqHeightSet",
+		"body": [
+			"$(${selector}).height(${value});"
+		],
+		"description": "Set the CSS height of every matched element."
+	},
+	"jqHide": {
+		"prefix": "jqHide",
+		"body": [
+			"$(${selector}).hide();"
+		],
+		"description": "Hide the matched elements."
+	},
+	"jqHideFull": {
+		"prefix": "jqHideFull",
+		"body": [
+			"$(${selector}).hide(${duration}, function () {",
+			"\t$0",
+			"});"
+		],
+		"description": "Hide the matched elements."
+	},
+	"jqHover": {
+		"prefix": "jqHover",
+		"body": [
+			"$(${selector}).hover(function () {",
+			"\t\t// over",
+			"\t\t$0",
+			"\t}, function () {",
+			"\t\t// out",
+			"\t}",
+			");"
+		],
+		"description": "Bind two handlers to the matched elements, to be executed when the mouse pointer enters and leaves the elements."
+	},
+	"jqHtmlGet": {
+		"prefix": "jqHtmlGet",
+		"body": [
+			"$(${selector}).html();"
+		],
+		"description": "Get the HTML contents of the first element in the set of matched elements."
+	},
+	"jqHtmlSet": {
+		"prefix": "jqHtmlSet",
+		"body": [
+			"$(${selector}).html(${htmlString});"
+		],
+		"description": "Set the HTML contents of each element in the set of matched elements."
+	},
+	"jqInnerHeight": {
+		"prefix": "jqInnerHeight",
+		"body": [
+			"$(${selector}).innerHeight();"
+		],
+		"description": "Get the current computed height for the first element in the set of matched elements, including padding but not border."
+	},
+	"jqInnerWidth": {
+		"prefix": "jqInnerWidth",
+		"body": [
+			"$(${selector}).innerWidth();"
+		],
+		"description": "Get the current computed inner width for the first element in the set of matched elements, including padding but not border."
+	},
+	"jqInsertAfter": {
+		"prefix": "jqInsertAfter",
+		"body": [
+			"$(${target}).insertAfter(${selector});"
+		],
+		"description": "Insert every element in the set of matched elements after the target."
+	},
+	"jqInsertBefore": {
+		"prefix": "jqInsertBefore",
+		"body": [
+			"$(${target}).insertBefore(${selector});"
+		],
+		"description": "Insert every element in the set of matched elements before the target."
+	},
+	"jqKeyDown": {
+		"prefix": "jqKeyDown",
+		"body": [
+			"$(${selector}).keydown(function (e) { ",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"keydown\" JavaScript event, or trigger that event on an element."
+	},
+	"jqKeyPress": {
+		"prefix": "jqKeyPress",
+		"body": [
+			"$(${selector}).keypress(function (e) { ",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"keypress\" JavaScript event, or trigger that event on an element."
+	},
+	"jqKeyUp": {
+		"prefix": "jqKeyUp",
+		"body": [
+			"$(${selector}).keyup(function (e) { ",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"keyup\" JavaScript event, or trigger that event on an element."
+	},
+	"jqLoadGet": {
+		"prefix": "jqLoadGet",
+		"body": [
+			"$(${selector}).load(\"${url}\", \"${data}\", function (response, status, request) {",
+			"\tthis; // dom element",
+			"\t$0",
+			"});"
+		],
+		"description": "Load data from the server and place the returned HTML into the matched element."
+	},
+	"jqLoadPost": {
+		"prefix": "jqLoadPost",
+		"body": [
+			"$(${selector}).load(\"${url}\", \"${data}\", function (response, status, request) {",
+			"\tthis; // dom element",
+			"\t$0",
+			"});"
+		],
+		"description": "Load data from the server and place the returned HTML into the matched element."
+	},
+	"jqMap": {
+		"prefix": "jqMap",
+		"body": [
+			"$.map(${arrayOrObject}, function (elementOrValue, indexOrKey) {",
+			"\t$0",
+			"});"
+		],
+		"description": "Translate all items in an array or object to new array of items."
+	},
+	"jqMouseDown": {
+		"prefix": "jqMouseDown",
+		"body": [
+			"$(${selector}).mousedown(function () { ",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"mousedown\" JavaScript event, or trigger that event on an element."
+	},
+	"jqMouseEnter": {
+		"prefix": "jqMouseEnter",
+		"body": [
+			"$(${selector}).mouseenter(function () { ",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to be fired when the mouse enters an element, or trigger that handler on an element."
+	},
+	"jqMouseLeave": {
+		"prefix": "jqMouseLeave",
+		"body": [
+			"$(${selector}).mouseleave(function () { ",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to be fired when the mouse leaves an element, or trigger that handler on an element."
+	},
+	"jqMouseMove": {
+		"prefix": "jqMouseMove",
+		"body": [
+			"$(${selector}).mousemove(function (e) { ",
+			"\t// values: e.clientX, e.clientY, e.pageX, e.pageY",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"mousemove\" JavaScript event, or trigger that event on an element."
+	},
+	"jqMouseOut": {
+		"prefix": "jqMouseOut",
+		"body": [
+			"$(${selector}).mouseout(function () { ",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"mouseout\" JavaScript event, or trigger that event on an element."
+	},
+	"jqMouseOver": {
+		"prefix": "jqMouseOver",
+		"body": [
+			"$(${selector}).mouseover(function () { ",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"mouseover\" JavaScript event, or trigger that event on an element."
+	},
+	"jqMouseUp": {
+		"prefix": "jqMouseUp",
+		"body": [
+			"$(${selector}).mouseup(function () { ",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"mouseup\" JavaScript event, or trigger that event on an element."
+	},
+	"jqNamespace": {
+		"prefix": "jqNamespace",
+		"body": [
+			"(function ( ${name}, $, undefined ) {",
+			"\t// Private Property",
+			"\tmyPrivateProperty = \"Private Property\";",
+			"\t\t",
+			"\t// Public Property",
+			"\t${name}.myPublicProperty = \"Publically Accessible Property\";",
+			"\t\t",
+			"\t// Private Method",
+			"\tfunction myPrivateMethod () {",
+			"\t\t",
+			"\t}",
+			"\t\t",
+			"\t// Public Method",
+			"\t${name}.myPublicMethod = function () {",
+			"\t\t",
+			"\t};  ",
+			"}(window.${name} = window.${name} || {}, jQuery ));"
+		],
+		"description": "A namespace template. ref: http://enterprisejquery.com/2010/10/how-good-c-habits-can-encourage-bad-javascript-habits-part-1/"
+	},
+	"jqOffsetGet": {
+		"prefix": "jqOffsetGet",
+		"body": [
+			"var offset = $(${selector}).offset();",
+			"var top = offset.top;",
+			"var left = offset.left;",
+			"$0"
+		],
+		"description": "Get the current coordinates of the first element, or set the coordinates of every element, in the set of matched elements, relative to the document."
+	},
+	"jqOffsetParent": {
+		"prefix": "jqOffsetParent",
+		"body": [
+			"var offset = $(${selector}).offsetParent();",
+			"var top = offset.top;",
+			"var left = offset.left;",
+			"$0"
+		],
+		"description": "Get the closest ancestor element that is positioned."
+	},
+	"jqOn": {
+		"prefix": "jqOn",
+		"body": [
+			"$(${selector}).on(${events}, function () {",
+			"\t$0",
+			"});"
+		],
+		"description": "Attach an event handler function for one or more events to the selected elements."
+	},
+	"jqOne": {
+		"prefix": "jqOne",
+		"body": [
+			"$(${selector}).one(${events}, function (e) {",
+			"\t$0",
+			"});"
+		],
+		"description": "Attach a handler to an event for the elements. The handler is executed at most once per element per event type."
+	},
+	"jqOneWithData": {
+		"prefix": "jqOneWithData",
+		"body": [
+			"$(${selector}).one(${events}, ${data}, function (e) {",
+			"\t$0",
+			"});"
+		],
+		"description": "Attach a handler to an event for the elements. The handler is executed at most once per element per event type."
+	},
+	"jqOuterHeight": {
+		"prefix": "jqOuterHeight",
+		"body": [
+			"$(${selector}).outerHeight(${includeMargin});"
+		],
+		"description": "Get the current computed height for the first element in the set of matched elements, including padding, border, and optionally margin. Returns a number (without \"px\") representation of the value or null if called on an empty set of elements."
+	},
+	"jqOuterWidth": {
+		"prefix": "jqOuterWidth",
+		"body": [
+			"$(${selector}).outerWidth(${includeMargin});"
+		],
+		"description": "Get the current computed width for the first element in the set of matched elements, including padding and border."
+	},
+	"jqPlugin": {
+		"prefix": "jqPlugin",
+		"body": [
+			"(function ($) {",
+			"\tjQuery.fn.${pluginName} = function (settings) {",
+			"\t\tvar config = {\u0027foo\u0027: \u0027bar\u0027};",
+			" ",
+			"\t\tif (settings) jQuery.extend(config, settings);",
+			" ",
+			"\t\tthis.each(function () {",
+			"\t\t\t// element-specific code here",
+			"\t\t\t$0",
+			"\t\t});",
+			" ",
+			"\t\treturn this;",
+			"\t};",
+			"})(jQuery);"
+		],
+		"description": "Plugin template."
+	},
+	"jqPosition": {
+		"prefix": "jqPosition",
+		"body": [
+			"var position = $(${selector}).position();",
+			"var top = position.top;",
+			"var left = position.left;",
+			"$0"
+		],
+		"description": "Get the current coordinates of the first element in the set of matched elements, relative to the offset parent."
+	},
+	"jqPost": {
+		"prefix": "jqPost",
+		"body": [
+			"$.post(\"${url}\", ${data},",
+			"\tfunction (data, textStatus, jqXHR) {",
+			"\t\t$0",
+			"\t},",
+			"\t\"${dataType}\"",
+			");"
+		],
+		"description": "Load data from the server using a HTTP POST request."
+	},
+	"jqPrepend": {
+		"prefix": "jqPrepend",
+		"body": [
+			"$(${selector}).prepend(${content});"
+		],
+		"description": "Insert content, specified by the parameter, to the beginning of each element in the set of matched elements."
+	},
+	"jqPrependTo": {
+		"prefix": "jqPrependTo",
+		"body": [
+			"$(${content}).prependTo(${selector});"
+		],
+		"description": "Insert every element in the set of matched elements to the beginning of the target."
+	},
+	"jqRemove": {
+		"prefix": "jqRemove",
+		"body": [
+			"$(${selector}).remove();"
+		],
+		"description": "Remove the set of matched elements from the DOM."
+	},
+	"jqRemoveExp": {
+		"prefix": "jqRemoveExp",
+		"body": [
+			"$(${selector}).remove(${expression});"
+		],
+		"description": "Remove the set of matched elements from the DOM."
+	},
+	"jqReplaceAll": {
+		"prefix": "jqReplaceAll",
+		"body": [
+			"$(${selector}).replaceAll(${target});"
+		],
+		"description": "Replace each target element with the set of matched elements."
+	},
+	"jqReplaceWith": {
+		"prefix": "jqReplaceWith",
+		"body": [
+			"$(${selector}).replaceWith(${newContent});"
+		],
+		"description": "Replace each element in the set of matched elements with the provided new content and return the set of elements that was removed."
+	},
+	"jqResize": {
+		"prefix": "jqResize",
+		"body": [
+			"$(${selector}).resize(function () { ",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"resize\" JavaScript event, or trigger that event on an element."
+	},
+	"jqScroll": {
+		"prefix": "jqScroll",
+		"body": [
+			"$(${selector}).scroll(function () { ",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"scroll\" JavaScript event, or trigger that event on an element."
+	},
+	"jqScrollLeftGet": {
+		"prefix": "jqScrollLeftGet",
+		"body": [
+			"$(${selector}).scrollLeft();"
+		],
+		"description": "Get the current horizontal position of the scroll bar for the first element in the set of matched elements."
+	},
+	"jqScrollLeftSet": {
+		"prefix": "jqScrollLeftSet",
+		"body": [
+			"$(${selector}).scrollLeft(${value});"
+		],
+		"description": "Set the current horizontal position of the scroll bar for each of the set of matched elements."
+	},
+	"jqScrollTopGet": {
+		"prefix": "jqScrollTopGet",
+		"body": [
+			"$(${selector}).scrollTop();"
+		],
+		"description": "Get the current vertical position of the scroll bar for the first element in the set of matched elements or set the vertical position of the scroll bar for every matched element."
+	},
+	"jqScrollTopSet": {
+		"prefix": "jqScrollTopSet",
+		"body": [
+			"$(${selector}).scrollTop(${value});"
+		],
+		"description": "Set the current vertical position of the scroll bar for each of the set of matched elements."
+	},
+	"jqSelect": {
+		"prefix": "jqSelect",
+		"body": [
+			"$(${selector}).select(function () { ",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"select\" JavaScript event, or trigger that event on an element."
+	},
+	"jqSelectTrigger": {
+		"prefix": "jqSelectTrigger",
+		"body": [
+			"$(${selector}).select();"
+		],
+		"description": "Bind an event handler to the \"select\" JavaScript event, or trigger that event on an element."
+	},
+	"jqShow": {
+		"prefix": "jqShow",
+		"body": [
+			"$(${selector}).show();"
+		],
+		"description": "Display the matched elements."
+	},
+	"jqShowFull": {
+		"prefix": "jqShowFull",
+		"body": [
+			"$(${selector}).show(${duration}, function () {",
+			"\t$0",
+			"});"
+		],
+		"description": "Display the matched elements."
+	},
+	"jqSlideDown": {
+		"prefix": "jqSlideDown",
+		"body": [
+			"$(${selector}).slideDown();"
+		],
+		"description": "Display the matched elements with a sliding motion."
+	},
+	"jqSlideDownFull": {
+		"prefix": "jqSlideDownFull",
+		"body": [
+			"$(${selector}).slideDown(${duration}, function () {",
+			"\t$0",
+			"});"
+		],
+		"description": "Display the matched elements with a sliding motion."
+	},
+	"jqSlideToggle": {
+		"prefix": "jqSlideToggle",
+		"body": [
+			"$(${selector}).slideToggle();"
+		],
+		"description": "Display or hide the matched elements with a sliding motion."
+	},
+	"jqSlideToggleFull": {
+		"prefix": "jqSlideToggleFull",
+		"body": [
+			"$(${selector}).slideToggle(${duration}, function () {",
+			"\t$0",
+			"});"
+		],
+		"description": "Display or hide the matched elements with a sliding motion."
+	},
+	"jqSlideUp": {
+		"prefix": "jqSlideUp",
+		"body": [
+			"$(${selector}).slideUp();"
+		],
+		"description": "Display the matched elements with a sliding motion."
+	},
+	"jqSlideUpFull": {
+		"prefix": "jqSlideUpFull",
+		"body": [
+			"$(${selector}).slideUp(${duration}, function () {",
+			"\t$0",
+			"});"
+		],
+		"description": "Display the matched elements with a sliding motion."
+	},
+	"jqSubmit": {
+		"prefix": "jqSubmit",
+		"body": [
+			"$(${selector}).submit(function (e) { ",
+			"\te.preventDefault();",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"submit\" JavaScript event, or trigger that event on an element."
+	},
+	"jqSubmitTrigger": {
+		"prefix": "jqSubmitTrigger",
+		"body": [
+			"$(${selector}).submit();"
+		],
+		"description": "Bind an event handler to the \"submit\" JavaScript event, or trigger that event on an element."
+	},
+	"jqTextGet": {
+		"prefix": "jqTextGet",
+		"body": [
+			"$(${selector}).text();"
+		],
+		"description": "Get the combined text contents of each element in the set of matched elements, including their descendants."
+	},
+	"jqTextSet": {
+		"prefix": "jqTextSet",
+		"body": [
+			"$(${selector}).text(${textString});"
+		],
+		"description": "Set the content of each element in the set of matched elements to the specified text."
+	},
+	"jqToggle": {
+		"prefix": "jqToggle",
+		"body": [
+			"$(${selector}).toggle();"
+		],
+		"description": "Display or hide the matched elements."
+	},
+	"jqToggleFull": {
+		"prefix": "jqToggleFull",
+		"body": [
+			"$(${selector}).toggle(${duration}, function () {",
+			"\t$0",
+			"});"
+		],
+		"description": "Display or hide the matched elements."
+	},
+	"jqToggleSwitch": {
+		"prefix": "jqToggleSwitch",
+		"body": [
+			"$(${selector}).toggle(${showOrHide});"
+		],
+		"description": "Display or hide the matched elements."
+	},
+	"jqTrigger": {
+		"prefix": "jqTrigger",
+		"body": [
+			"$(${selector}).trigger(${eventType});"
+		],
+		"description": "Execute all handlers and behaviors attached to the matched elements for the given event type."
+	},
+	"jqTriggerHandler": {
+		"prefix": "jqTriggerHandler",
+		"body": [
+			"$(${selector}).triggerHandler(${eventType});"
+		],
+		"description": "Execute all handlers attached to an element for an event."
+	},
+	"jqTriggerHandlerWithData": {
+		"prefix": "jqTriggerHandlerWithData",
+		"body": [
+			"$(${selector}).triggerHandler(${eventType}, { ${name}: ${value} });"
+		],
+		"description": "Execute all handlers attached to an element for an event."
+	},
+	"jqTriggerWithData": {
+		"prefix": "jqTriggerWithData",
+		"body": [
+			"$(${selector}).trigger(${eventType}, { ${name}: ${value} });"
+		],
+		"description": "Execute all handlers and behaviors attached to the matched elements for the given event type."
+	},
+	"jqUnbind": {
+		"prefix": "jqUnbind",
+		"body": [
+			"$(${selector}).unbind(${eventType});"
+		],
+		"description": "Remove a previously-attached event handler from the elements."
+	},
+	"jqUnbindAll": {
+		"prefix": "jqUnbindAll",
+		"body": [
+			"$(${selector}).unbind();"
+		],
+		"description": "Remove a previously-attached event handler from the elements."
+	},
+	"jqUnload": {
+		"prefix": "jqUnload",
+		"body": [
+			"$(${selector}).unload(function () { ",
+			"\t$0",
+			"});"
+		],
+		"description": "Bind an event handler to the \"unload\" JavaScript event."
+	},
+	"jqValGet": {
+		"prefix": "jqValGet",
+		"body": [
+			"$(${selector}).val();"
+		],
+		"description": "Get the current value of the first element in the set of matched elements."
+	},
+	"jqValSet": {
+		"prefix": "jqValSet",
+		"body": [
+			"$(${selector}).val(${value});"
+		],
+		"description": "Set the value of each element in the set of matched elements."
+	},
+	"jqWidthGet": {
+		"prefix": "jqWidthGet",
+		"body": [
+			"$(${selector}).width();"
+		],
+		"description": "Get the current computed width for the first element in the set of matched elements."
+	},
+	"jqWidthSet": {
+		"prefix": "jqWidthSet",
+		"body": [
+			"$(${selector}).width(${value});"
+		],
+		"description": "Set the CSS width of each element in the set of matched elements."
+	},
+	"jqWrap": {
+		"prefix": "jqWrap",
+		"body": [
+			"$(${selector}).wrap(\"\u003c${wrappingElement}\u003e\u003c/${wrappingElement}\u003e\");"
+		],
+		"description": "Wrap an HTML structure around each element in the set of matched elements."
+	},
+	"jqWrapAll": {
+		"prefix": "jqWrapAll",
+		"body": [
+			"$(${selector}).wrapAll(\"\u003c${wrappingElement}\u003e\u003c/${wrappingElement}\u003e\");"
+		],
+		"description": "Wrap an HTML structure around all elements in the set of matched elements."
+	},
+	"jqWrapInner": {
+		"prefix": "jqWrapInner",
+		"body": [
+			"$(${selector}).wrapInner(\"\u003c${wrappingElement}\u003e\u003c/${wrappingElement}\u003e\");"
+		],
+		"description": "Wrap an HTML structure around the content of each element in the set of matched elements."
+	},
+	"doctype": {
+        "prefix": "doctype",
+        "body": [
+            "<!DOCTYPE>",
+            "$1"
+        ],
+        "description": "HTML - Defines the document type"
+    },
+    "a": {
+        "prefix": "a",
+        "body": "<a href=\"$1\">$2</a>$3",
+        "description": "HTML - Defines a hyperlink"
+    },
+	"class": {
+		"prefix": "class",
+		"body": "class='$1'",
+		"description": "CSS - class"
+	},
+    "abbr": {
+        "prefix": "abbr",
+        "body": "<abbr title=\"$1\">$2</abbr>$3",
+        "description": "HTML - Defines an abbreviation"
+    },
+    "address": {
+        "prefix": "address",
+        "body": [
+            "<address>",
+            "$1",
+            "</address>"
+        ],
+        "description": "HTML - Defines an address element"
+    },
+    "area": {
+        "prefix": "area",
+        "body": "<area shape=\"$1\" coords=\"$2\" href=\"$3\" alt=\"$4\">$5",
+        "description": "HTML - Defines an area inside an image map"
+    },
+    "article": {
+        "prefix": "article",
+        "body": [
+            "<article>",
+            "\t$1",
+            "</article>"
+        ],
+        "description": "HTML - Defines an article"
+    },
+    "aside": {
+        "prefix": "aside",
+        "body": [
+            "<aside>",
+            "\t$1",
+            "</aside>$2"
+        ],
+        "description": "HTML - Defines content aside from the page content"
+    },
+    "audio": {
+        "prefix": "audio",
+        "body": [
+            "<audio controls>",
+            "\t$1",
+            "</audio>"
+        ],
+        "description": "HTML - Defines sounds content"
+    },
+    "b": {
+        "prefix": "b",
+        "body": "<b>$1</b>$2",
+        "description": "HTML - Defines bold text"
+    },
+    "base": {
+        "prefix": "base",
+        "body": "<base href=\"$1\" target=\"$2\">$3",
+        "description": "HTML - Defines a base URL for all the links in a page"
+    },
+    "bdi": {
+        "prefix": "bdi",
+        "body": "<bdi>$1</bdi>$2",
+        "description": "HTML - Used to isolate text that is of unknown directionality"
+    },
+    "bdo": {
+        "prefix": "bdo",
+        "body": [
+            "<bdo dir=\"$1\">",
+            "$2",
+            "</bdo>"
+        ],
+        "description": "HTML - Defines the direction of text display"
+    },
+    "big": {
+        "prefix": "big",
+        "body": "<big>$1</big>$2",
+        "description": "HTML - Used to make text bigger"
+    },
+    "blockquote": {
+        "prefix": "blockquote",
+        "body": [
+            "<blockquote cite=\"$2\">",
+            "\t$1",
+            "</blockquote>"
+        ],
+        "description": "HTML - Defines a long quotation"
+    },
+    "body": {
+        "prefix": "body",
+        "body": [
+            "<body>",
+            "\t$1",
+            "</body>"
+        ],
+        "description": "HTML - Defines the body element"
+    },
+    "br": {
+        "prefix": "br",
+        "body": "<br>",
+        "description": "HTML - Inserts a single line break"
+    },
+    "button": {
+        "prefix": "button",
+        "body": "<button type=\"$1\">$2</button>$3",
+        "description": "HTML - Defines a push button"
+    },
+    "canvas": {
+        "prefix": "canvas",
+        "body": "<canvas id=\"$1\">$2</canvas>$3",
+        "description": "HTML - Defines graphics"
+    },
+    "caption": {
+        "prefix": "caption",
+        "body": "<caption>$1</caption>$2",
+        "description": "HTML - Defines a table caption"
+    },
+    "cite": {
+        "prefix": "cite",
+        "body": "<cite>$1</cite>$2",
+        "description": "HTML - Defines a citation"
+    },
+    "code": {
+        "prefix": "code",
+        "body": "<code>$1</code>$2",
+        "description": "HTML - Defines computer code text"
+    },
+    "col": {
+        "prefix": "col",
+        "body": "<col>$2",
+        "description": "HTML - Defines attributes for table columns"
+    },
+    "colgroup": {
+        "prefix": "colgroup",
+        "body": [
+            "<colgroup>",
+            "\t$1",
+            "</colgroup>"
+        ],
+        "description": "HTML - Defines group of table columns"
+    },
+    "command": {
+        "prefix": "command",
+        "body": "<command>$1</command>$2",
+        "description": "HTML - Defines a command button [not supported]"
+    },
+    "datalist": {
+        "prefix": "datalist",
+        "body": [
+            "<datalist>",
+            "\t$1",
+            "</datalist>"
+        ],
+        "description": "HTML - Defines a dropdown list"
+    },
+    "dd": {
+        "prefix": "dd",
+        "body": "<dd>$1</dd>$2",
+        "description": "HTML - Defines a definition description"
+    },
+    "del": {
+        "prefix": "del",
+        "body": "<del>$1</del>$2",
+        "description": "HTML - Defines deleted text"
+    },
+    "details": {
+        "prefix": "details",
+        "body": [
+            "<details>",
+            "\t$1",
+            "</details>"
+        ],
+        "description": "HTML - Defines details of an element"
+    },
+    "dialog": {
+        "prefix": "dialog",
+        "body": "<dialog>$1</dialog>$2",
+        "description": "HTML - Defines a dialog (conversation)"
+    },
+    "dfn": {
+        "prefix": "dfn",
+        "body": "<dfn>$1</dfn>$2",
+        "description": "HTML - Defines a definition term"
+    },
+    "div": {
+        "prefix": "div",
+        "body": [
+            "<div>",
+            "\t$1",
+            "</div>"
+        ],
+        "description": "HTML - Defines a section in a document"
+    },
+    "dl": {
+        "prefix": "dl",
+        "body": [
+            "<dl>",
+            "\t$1",
+            "</dl>"
+        ],
+        "description": "HTML - Defines a definition list"
+    },
+    "dt": {
+        "prefix": "dt",
+        "body": "<dt>$1</dt>$2",
+        "description": "HTML - Defines a definition term"
+    },
+    "em": {
+        "prefix": "em",
+        "body": "<em>$1</em>$2",
+        "description": "HTML - Defines emphasized text"
+    },
+    "embed": {
+        "prefix": "embed",
+        "body": "<embed src=\"$1\">$2",
+        "description": "HTML - Defines external interactive content ot plugin"
+    },
+    "fieldset": {
+        "prefix": "fieldset",
+        "body": [
+            "<fieldset>",
+            "\t$1",
+            "</fieldset>"
+        ],
+        "description": "HTML - Defines a fieldset"
+    },
+    "figcaption": {
+        "prefix": "figcaption",
+        "body": "<figcaption>$1</figcaption>$2",
+        "description": "HTML - Defines a caption for a figure"
+    },
+    "figure": {
+        "prefix": "figure",
+        "body": [
+            "<figure>",
+            "\t$1",
+            "</figure>"
+        ],
+        "description": "HTML - Defines a group of media content, and their caption"
+    },
+    "footer": {
+        "prefix": "footer",
+        "body": [
+            "<footer>",
+            "\t$1",
+            "</footer>"
+        ],
+        "description": "HTML - Defines a footer for a section or page"
+    },
+    "form": {
+        "prefix": "form",
+        "body": [
+            "<form>",
+            "\t$1",
+            "</form>"
+        ],
+        "description": "HTML - Defines a form"
+    },
+    "h1": {
+        "prefix": "h1",
+        "body": "<h1>$1</h1>$2",
+        "description": "HTML - Defines header 1"
+    },
+    "h2": {
+        "prefix": "h2",
+        "body": "<h2>$1</h2>$2",
+        "description": "HTML - Defines header 2"
+    },
+    "h3": {
+        "prefix": "h3",
+        "body": "<h3>$1</h3>$2",
+        "description": "HTML - Defines header 3"
+    },
+    "h4": {
+        "prefix": "h4",
+        "body": "<h4>$1</h4>$2",
+        "description": "HTML - Defines header 4"
+    },
+    "h5": {
+        "prefix": "h5",
+        "body": "<h5>$1</h5>$2",
+        "description": "HTML - Defines header 5"
+    },
+    "h6": {
+        "prefix": "h6",
+        "body": "<h6>$1</h6>$2",
+        "description": "HTML - Defines header 6"
+    },
+    "head": {
+        "prefix": "head",
+        "body": [
+            "<head>",
+            "\t$1",
+            "</head>"
+        ],
+        "description": "HTML - Defines information about the document"
+    },
+    "header": {
+        "prefix": "header",
+        "body": [
+            "<header>",
+            "\t$1",
+            "</header>"
+        ],
+        "description": "HTML - Defines a header for a section of page"
+    },
+    "hgroup": {
+        "prefix": "hgroup",
+        "body": [
+            "<hgroup>",
+            "\t$1",
+            "</hgroup>"
+        ],
+        "description": "HTML - Defines information about a section in a document"
+    },
+    "hr": {
+        "prefix": "hr",
+        "body": "<hr>",
+        "description": "HTML - Defines a horizontal rule"
+    },
+    "html": {
+        "prefix": "html",
+        "body": [
+            "<html>",
+            "\t$1",
+            "</html>"
+        ],
+        "description": "HTML - Defines an html document"
+    },
+    "html5": {
+        "prefix": "html5",
+        "body": [
+            "<!DOCTYPE html>",
+            "<html lang=\"$1en\">",
+            "\t<head>",
+            "\t\t<title>$2</title>",
+            "\t\t<meta charset=\"UTF-8\">",
+            "\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">",
+            "\t\t<link href=\"$3css/style.css\" rel=\"stylesheet\">",
+            "\t</head>",
+            "\t<body>",
+            "\t$4",
+            "\t</body>",
+            "</html>"
+        ],
+        "description": "HTML - Defines a template for a html5 document"
+    },
+    "i": {
+        "prefix": "i",
+        "body": "<i>$1</i>$2",
+        "description": "HTML - Defines italic text"
+    },
+    "iframe": {
+        "prefix": "iframe",
+        "body": "<iframe src=\"$1\">$2</iframe>$3",
+        "description": "HTML - Defines an inline sub window"
+    },
+    "img": {
+        "prefix": "img",
+        "body": "<img src=\"$1\" alt=\"$2\">$3",
+        "description": "HTML - Defines an image"
+    },
+    "input": {
+        "prefix": "input",
+        "body": "<input type=\"$1\" name=\"$2\" value=\"$3\">$4",
+        "description": "HTML - Defines an input field"
+    },
+    "ins": {
+        "prefix": "ins",
+        "body": "<ins>$1</ins>$2",
+        "description": "HTML - Defines inserted text"
+    },
+    "keygen": {
+        "prefix": "keygen",
+        "body": "<keygen name=\"$1\">$2",
+        "description": "HTML - Defines a generated key in a form"
+    },
+    "kbd": {
+        "prefix": "kbd",
+        "body": "<kbd>$1</kbd>$2",
+        "description": "HTML - Defines keyboard text"
+    },
+    "label": {
+        "prefix": "label",
+        "body": "<label for=\"$1\">$2</label>$3",
+        "description": "HTML - Defines an inline window"
+    },
+    "legend": {
+        "prefix": "legend",
+        "body": "<legend>$1</legend>$2",
+        "description": "HTML - Defines a title in a fieldset"
+    },
+    "li": {
+        "prefix": "li",
+        "body": "<li>$1</li>$2",
+        "description": "HTML - Defines a list item"
+    },
+    "link": {
+        "prefix": "link",
+        "body": "<link rel=\"$1\" type=\"$2\" href=\"$3\">$4",
+        "description": "HTML - Defines a resource reference"
+    },
+    "main": {
+        "prefix": "main",
+        "body": [
+            "<main>",
+            "\t$1",
+            "</main>"
+        ],
+        "description": "HTML - Defines an image map"
+    },
+    "map": {
+        "prefix": "map",
+        "body": [
+            "<map name=\"$1\">",
+            "\t$2",
+            "</map>"
+        ],
+        "description": "HTML - Defines an image map"
+    },
+    "mark": {
+        "prefix": "mark",
+        "body": "<mark>$1</mark>$2",
+        "description": "HTML - Defines marked text"
+    },
+    "menu": {
+        "prefix": "menu",
+        "body": [
+            "<menu>",
+            "\t$1",
+            "</menu>"
+        ],
+        "description": "HTML - Defines a menu list"
+    },
+    "menuitem": {
+        "prefix": "menuitem",
+        "body": "<menuitem>$1</menuitem>$2",
+        "description": "HTML - Defines a menu item [firefox only]"
+    },
+    "meta": {
+        "prefix": "meta",
+        "body": "<meta name=\"$1\" content=\"$2\">$3",
+        "description": "HTML - Defines meta information"
+    },
+    "meter": {
+        "prefix": "meter",
+        "body": "<meter value=\"$1\">$2</meter>$3",
+        "description": "HTML - Defines measurement within a predefined range"
+    },
+    "nav": {
+        "prefix": "nav",
+        "body": [
+            "<nav>",
+            "\t$1",
+            "</nav>"
+        ],
+        "description": "HTML - Defines navigation links"
+    },
+    "noscript": {
+        "prefix": "noscript",
+        "body": [
+            "<noscript>",
+            "$1",
+            "</noscript>"
+        ],
+        "description": "HTML - Defines a noscript section"
+    },
+    "object": {
+        "prefix": "object",
+        "body": "<object width=\"$1\" height=\"$2\" data=\"$3\">$4</object>$5",
+        "description": "HTML - Defines an embedded object"
+    },
+    "ol": {
+        "prefix": "ol",
+        "body": [
+            "<ol>",
+            "\t$1",
+            "</ol>"
+        ],
+        "description": "HTML - Defines an ordered list"
+    },
+    "optgroup": {
+        "prefix": "optgroup",
+        "body": [
+            "<optgroup>",
+            "\t$1",
+            "</optgroup>"
+        ],
+        "description": "HTML - Defines an option group"
+    },
+    "option": {
+        "prefix": "option",
+        "body": "<option value=\"$1\">$2</option>$3",
+        "description": "HTML - Defines an option in a drop-down list"
+    },
+    "output": {
+        "prefix": "output",
+        "body": "<output name=\"$1\" for=\"$2\">$3</output>$4",
+        "description": "HTML - Defines some types of output"
+    },
+    "p": {
+        "prefix": "p",
+        "body": "<p>$1</p>$2",
+        "description": "HTML - Defines a paragraph"
+    },
+    "param": {
+        "prefix": "param",
+        "body": "<param name=\"$1\" value=\"$2\">$3",
+        "description": "HTML - Defines a parameter for an object"
+    },
+    "pre": {
+        "prefix": "pre",
+        "body": [
+            "<pre>",
+            "$1",
+            "</pre>"
+        ],
+        "description": "HTML - Defines preformatted text"
+    },
+    "progress": {
+        "prefix": "progress",
+        "body": "<progress value=\"$1\" max=\"$2\">$3</progress>$4",
+        "description": "HTML - Defines progress of a task of any kind"
+    },
+    "q": {
+        "prefix": "q",
+        "body": "<q>$1</q>$2",
+        "description": "HTML - Defines a short quotation"
+    },
+    "rp": {
+        "prefix": "rp",
+        "body": "<rp>$1</rp>$2",
+        "description": "HTML - Used in ruby annotations to define what to show browsers that do not support the ruby element"
+    },
+    "rt": {
+        "prefix": "rt",
+        "body": "<rt>$1</rt>$2",
+        "description": "HTML - Defines explanation to ruby annotations"
+    },
+    "ruby": {
+        "prefix": "ruby",
+        "body": [
+            "<ruby>",
+            "$1",
+            "</ruby>"
+        ],
+        "description": "HTML - Defines ruby annotations"
+    },
+    "s": {
+        "prefix": "s",
+        "body": "<s>$1</s>$2",
+        "description": "HTML - Used to define strikethrough text"
+    },
+    "samp": {
+        "prefix": "samp",
+        "body": "<samp>$1</samp>$2",
+        "description": "HTML - Defines sample computer code"
+    },
+    "script": {
+        "prefix": "script",
+        "body": [
+            "<script>",
+            "\t$1",
+            "</script>"
+        ],
+        "description": "HTML - Defines a definition list"
+    },
+    "section": {
+        "prefix": "section",
+        "body": [
+            "<section>",
+            "\t$1",
+            "</section>"
+        ],
+        "description": "HTML - Defines a section"
+    },
+    "select": {
+        "prefix": "select",
+        "body": [
+            "<select>",
+            "\t$1",
+            "</select>"
+        ],
+        "description": "HTML - Defines a selectable list"
+    },
+    "small": {
+        "prefix": "small",
+        "body": "<small>$1</small>$2",
+        "description": "HTML - Defines small text"
+    },
+    "source": {
+        "prefix": "source",
+        "body": "<source src=\"$1\" type=\"$2\">$3",
+        "description": "HTML - Defines media resource"
+    },
+    "span": {
+        "prefix": "span",
+        "body": "<span>$1</span>$2",
+        "description": "HTML - Defines a section in a document"
+    },
+    "strong": {
+        "prefix": "strong",
+        "body": "<strong>$1</strong>$2",
+        "description": "HTML - Defines strong text"
+    },
+    "style": {
+        "prefix": "style",
+        "body": [
+            "<style>",
+            "$1",
+            "</style>"
+        ],
+        "description": "HTML - Defines a style definition"
+    },
+    "sub": {
+        "prefix": "sub",
+        "body": "<sub>$1</sub>$2",
+        "description": "HTML - Defines sub-scripted text"
+    },
+    "sup": {
+        "prefix": "sup",
+        "body": "<sup>$1</sup>$2",
+        "description": "HTML - Defines super-scripted text"
+    },
+    "summary": {
+        "prefix": "summary",
+        "body": "<summary>$1</summary>$2",
+        "description": "HTML - Defines a visible heading for the detail element [limited support]"
+    },
+    "table": {
+        "prefix": "table",
+        "body": [
+            "<table>",
+            "\t$1",
+            "</table>"
+        ],
+        "description": "HTML - Defines a table"
+    },
+    "tbody": {
+        "prefix": "tbody",
+        "body": [
+            "<tbody>",
+            "\t$1",
+            "</tbody>"
+        ],
+        "description": "HTML - Defines a table body"
+    },
+    "td": {
+        "prefix": "td",
+        "body": "<td>$1</td>$2",
+        "description": "HTML - Defines a table cell"
+    },
+    "textarea": {
+        "prefix": "textarea",
+        "body": "<textarea rows=\"$1\" cols=\"$2\">$3</textarea>$4",
+        "description": "HTML - Defines a text area"
+    },
+    "tfoot": {
+        "prefix": "tfoot",
+        "body": [
+            "<tfoot>",
+            "\t$1",
+            "</tfoot>"
+        ],
+        "description": "HTML - Defines a table footer"
+    },
+    "thead": {
+        "prefix": "thead",
+        "body": [
+            "<thead>",
+            "$1",
+            "</thead>"
+        ],
+        "description": "HTML - Defines a table head"
+    },
+    "th": {
+        "prefix": "th",
+        "body": "<th>$1</th>$2",
+        "description": "HTML - Defines a table header"
+    },
+    "time": {
+        "prefix": "time",
+        "body": "<time datetime=\"$1\">$2</time>$3",
+        "description": "HTML - Defines a date/time"
+    },
+    "title": {
+        "prefix": "title",
+        "body": "<title>$1</title>$2"
+    }
+}
