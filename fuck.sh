@@ -1,10 +1,10 @@
 #!/bin/bash
 
-Length=$(git ls-files --others --exclude-standard -m);
+Length=$(git diff --name-only --diff-filter=ACMR);
 Length=${#Length} 
 
 if [ "$Length" -gt 0 ]; then
-foca $(git ls-files --others --exclude-standard -m);
+foca $(git diff --name-only --diff-filter=ACMR);
 git add -A;
 fi
 
