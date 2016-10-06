@@ -24,6 +24,7 @@ alias installvhw='cdw && git clone git@github.com:Valemobi/valebroker-html-web.g
 
 alias letsgo='code ~/Workspace && 1all'
 alias sql='code ~/MyScripts/Valemobi/AndBank/'
+alias codebash='code ~/.bashrc'
 alias fu='fuck.sh'
 alias c='foca --container'
 alias d0='git checkout andbank_dev'
