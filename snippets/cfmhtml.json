@@ -1100,22 +1100,22 @@
         "description": "HTML - Defines the document type"
     },
     "a": {
-        "prefix": "a",
+        "prefix": "<a",
         "body": "<a href=\"$1\">$2</a>$3",
         "description": "HTML - Defines a hyperlink"
     },
 	"class": {
-		"prefix": "class",
+		"prefix": "<class",
 		"body": "class='$1'",
 		"description": "CSS - class"
 	},
     "abbr": {
-        "prefix": "abbr",
+        "prefix": "<abbr",
         "body": "<abbr title=\"$1\">$2</abbr>$3",
         "description": "HTML - Defines an abbreviation"
     },
     "address": {
-        "prefix": "address",
+        "prefix": "<address",
         "body": [
             "<address>",
             "$1",
@@ -1124,12 +1124,12 @@
         "description": "HTML - Defines an address element"
     },
     "area": {
-        "prefix": "area",
+        "prefix": "<area",
         "body": "<area shape=\"$1\" coords=\"$2\" href=\"$3\" alt=\"$4\">$5",
         "description": "HTML - Defines an area inside an image map"
     },
     "article": {
-        "prefix": "article",
+        "prefix": "<article",
         "body": [
             "<article>",
             "\t$1",
@@ -1138,7 +1138,7 @@
         "description": "HTML - Defines an article"
     },
     "aside": {
-        "prefix": "aside",
+        "prefix": "<aside",
         "body": [
             "<aside>",
             "\t$1",
@@ -1147,7 +1147,7 @@
         "description": "HTML - Defines content aside from the page content"
     },
     "audio": {
-        "prefix": "audio",
+        "prefix": "<audio",
         "body": [
             "<audio controls>",
             "\t$1",
@@ -1156,22 +1156,22 @@
         "description": "HTML - Defines sounds content"
     },
     "b": {
-        "prefix": "b",
+        "prefix": "<b",
         "body": "<b>$1</b>$2",
         "description": "HTML - Defines bold text"
     },
     "base": {
-        "prefix": "base",
+        "prefix": "<base",
         "body": "<base href=\"$1\" target=\"$2\">$3",
         "description": "HTML - Defines a base URL for all the links in a page"
     },
     "bdi": {
-        "prefix": "bdi",
+        "prefix": "<bdi",
         "body": "<bdi>$1</bdi>$2",
         "description": "HTML - Used to isolate text that is of unknown directionality"
     },
     "bdo": {
-        "prefix": "bdo",
+        "prefix": "<bdo",
         "body": [
             "<bdo dir=\"$1\">",
             "$2",
@@ -1180,12 +1180,12 @@
         "description": "HTML - Defines the direction of text display"
     },
     "big": {
-        "prefix": "big",
+        "prefix": "<big",
         "body": "<big>$1</big>$2",
         "description": "HTML - Used to make text bigger"
     },
     "blockquote": {
-        "prefix": "blockquote",
+        "prefix": "<blockquote",
         "body": [
             "<blockquote cite=\"$2\">",
             "\t$1",
@@ -1194,7 +1194,7 @@
         "description": "HTML - Defines a long quotation"
     },
     "body": {
-        "prefix": "body",
+        "prefix": "<body",
         "body": [
             "<body>",
             "\t$1",
@@ -1203,42 +1203,42 @@
         "description": "HTML - Defines the body element"
     },
     "br": {
-        "prefix": "br",
+        "prefix": "<br",
         "body": "<br>",
         "description": "HTML - Inserts a single line break"
     },
     "button": {
-        "prefix": "button",
+        "prefix": "<button",
         "body": "<button type=\"$1\">$2</button>$3",
         "description": "HTML - Defines a push button"
     },
     "canvas": {
-        "prefix": "canvas",
+        "prefix": "<canvas",
         "body": "<canvas id=\"$1\">$2</canvas>$3",
         "description": "HTML - Defines graphics"
     },
     "caption": {
-        "prefix": "caption",
+        "prefix": "<caption",
         "body": "<caption>$1</caption>$2",
         "description": "HTML - Defines a table caption"
     },
     "cite": {
-        "prefix": "cite",
+        "prefix": "<cite",
         "body": "<cite>$1</cite>$2",
         "description": "HTML - Defines a citation"
     },
     "code": {
-        "prefix": "code",
+        "prefix": "<code",
         "body": "<code>$1</code>$2",
         "description": "HTML - Defines computer code text"
     },
     "col": {
-        "prefix": "col",
+        "prefix": "<col",
         "body": "<col>$2",
         "description": "HTML - Defines attributes for table columns"
     },
     "colgroup": {
-        "prefix": "colgroup",
+        "prefix": "<colgroup",
         "body": [
             "<colgroup>",
             "\t$1",
@@ -1247,12 +1247,12 @@
         "description": "HTML - Defines group of table columns"
     },
     "command": {
-        "prefix": "command",
+        "prefix": "<command",
         "body": "<command>$1</command>$2",
         "description": "HTML - Defines a command button [not supported]"
     },
     "datalist": {
-        "prefix": "datalist",
+        "prefix": "<datalist",
         "body": [
             "<datalist>",
             "\t$1",
@@ -1261,17 +1261,17 @@
         "description": "HTML - Defines a dropdown list"
     },
     "dd": {
-        "prefix": "dd",
+        "prefix": "<dd",
         "body": "<dd>$1</dd>$2",
         "description": "HTML - Defines a definition description"
     },
     "del": {
-        "prefix": "del",
+        "prefix": "<del",
         "body": "<del>$1</del>$2",
         "description": "HTML - Defines deleted text"
     },
     "details": {
-        "prefix": "details",
+        "prefix": "<details",
         "body": [
             "<details>",
             "\t$1",
@@ -1280,17 +1280,17 @@
         "description": "HTML - Defines details of an element"
     },
     "dialog": {
-        "prefix": "dialog",
+        "prefix": "<dialog",
         "body": "<dialog>$1</dialog>$2",
         "description": "HTML - Defines a dialog (conversation)"
     },
     "dfn": {
-        "prefix": "dfn",
+        "prefix": "<dfn",
         "body": "<dfn>$1</dfn>$2",
         "description": "HTML - Defines a definition term"
     },
     "div": {
-        "prefix": "div",
+        "prefix": "<div",
         "body": [
             "<div>",
             "\t$1",
@@ -1299,7 +1299,7 @@
         "description": "HTML - Defines a section in a document"
     },
     "dl": {
-        "prefix": "dl",
+        "prefix": "<dl",
         "body": [
             "<dl>",
             "\t$1",
@@ -1308,22 +1308,22 @@
         "description": "HTML - Defines a definition list"
     },
     "dt": {
-        "prefix": "dt",
+        "prefix": "<dt",
         "body": "<dt>$1</dt>$2",
         "description": "HTML - Defines a definition term"
     },
     "em": {
-        "prefix": "em",
+        "prefix": "<em",
         "body": "<em>$1</em>$2",
         "description": "HTML - Defines emphasized text"
     },
     "embed": {
-        "prefix": "embed",
+        "prefix": "<embed",
         "body": "<embed src=\"$1\">$2",
         "description": "HTML - Defines external interactive content ot plugin"
     },
     "fieldset": {
-        "prefix": "fieldset",
+        "prefix": "<fieldset",
         "body": [
             "<fieldset>",
             "\t$1",
@@ -1332,12 +1332,12 @@
         "description": "HTML - Defines a fieldset"
     },
     "figcaption": {
-        "prefix": "figcaption",
+        "prefix": "<figcaption",
         "body": "<figcaption>$1</figcaption>$2",
         "description": "HTML - Defines a caption for a figure"
     },
     "figure": {
-        "prefix": "figure",
+        "prefix": "<figure",
         "body": [
             "<figure>",
             "\t$1",
@@ -1346,7 +1346,7 @@
         "description": "HTML - Defines a group of media content, and their caption"
     },
     "footer": {
-        "prefix": "footer",
+        "prefix": "<footer",
         "body": [
             "<footer>",
             "\t$1",
@@ -1355,7 +1355,7 @@
         "description": "HTML - Defines a footer for a section or page"
     },
     "form": {
-        "prefix": "form",
+        "prefix": "<form",
         "body": [
             "<form>",
             "\t$1",
@@ -1364,37 +1364,37 @@
         "description": "HTML - Defines a form"
     },
     "h1": {
-        "prefix": "h1",
+        "prefix": "<h1",
         "body": "<h1>$1</h1>$2",
         "description": "HTML - Defines header 1"
     },
     "h2": {
-        "prefix": "h2",
+        "prefix": "<h2",
         "body": "<h2>$1</h2>$2",
         "description": "HTML - Defines header 2"
     },
     "h3": {
-        "prefix": "h3",
+        "prefix": "<h3",
         "body": "<h3>$1</h3>$2",
         "description": "HTML - Defines header 3"
     },
     "h4": {
-        "prefix": "h4",
+        "prefix": "<h4",
         "body": "<h4>$1</h4>$2",
         "description": "HTML - Defines header 4"
     },
     "h5": {
-        "prefix": "h5",
+        "prefix": "<h5",
         "body": "<h5>$1</h5>$2",
         "description": "HTML - Defines header 5"
     },
     "h6": {
-        "prefix": "h6",
+        "prefix": "<h6",
         "body": "<h6>$1</h6>$2",
         "description": "HTML - Defines header 6"
     },
     "head": {
-        "prefix": "head",
+        "prefix": "<head",
         "body": [
             "<head>",
             "\t$1",
@@ -1403,7 +1403,7 @@
         "description": "HTML - Defines information about the document"
     },
     "header": {
-        "prefix": "header",
+        "prefix": "<header",
         "body": [
             "<header>",
             "\t$1",
@@ -1412,7 +1412,7 @@
         "description": "HTML - Defines a header for a section of page"
     },
     "hgroup": {
-        "prefix": "hgroup",
+        "prefix": "<hgroup",
         "body": [
             "<hgroup>",
             "\t$1",
@@ -1421,12 +1421,12 @@
         "description": "HTML - Defines information about a section in a document"
     },
     "hr": {
-        "prefix": "hr",
+        "prefix": "<hr",
         "body": "<hr>",
         "description": "HTML - Defines a horizontal rule"
     },
     "html": {
-        "prefix": "html",
+        "prefix": "<html",
         "body": [
             "<html>",
             "\t$1",
@@ -1435,7 +1435,7 @@
         "description": "HTML - Defines an html document"
     },
     "html5": {
-        "prefix": "html5",
+        "prefix": "<html5",
         "body": [
             "<!DOCTYPE html>",
             "<html lang=\"$1en\">",
@@ -1453,62 +1453,62 @@
         "description": "HTML - Defines a template for a html5 document"
     },
     "i": {
-        "prefix": "i",
+        "prefix": "<i",
         "body": "<i>$1</i>$2",
         "description": "HTML - Defines italic text"
     },
     "iframe": {
-        "prefix": "iframe",
+        "prefix": "<iframe",
         "body": "<iframe src=\"$1\">$2</iframe>$3",
         "description": "HTML - Defines an inline sub window"
     },
     "img": {
-        "prefix": "img",
+        "prefix": "<img",
         "body": "<img src=\"$1\" alt=\"$2\">$3",
         "description": "HTML - Defines an image"
     },
     "input": {
-        "prefix": "input",
+        "prefix": "<input",
         "body": "<input type=\"$1\" name=\"$2\" value=\"$3\">$4",
         "description": "HTML - Defines an input field"
     },
     "ins": {
-        "prefix": "ins",
+        "prefix": "<ins",
         "body": "<ins>$1</ins>$2",
         "description": "HTML - Defines inserted text"
     },
     "keygen": {
-        "prefix": "keygen",
+        "prefix": "<keygen",
         "body": "<keygen name=\"$1\">$2",
         "description": "HTML - Defines a generated key in a form"
     },
     "kbd": {
-        "prefix": "kbd",
+        "prefix": "<kbd",
         "body": "<kbd>$1</kbd>$2",
         "description": "HTML - Defines keyboard text"
     },
     "label": {
-        "prefix": "label",
+        "prefix": "<label",
         "body": "<label for=\"$1\">$2</label>$3",
         "description": "HTML - Defines an inline window"
     },
     "legend": {
-        "prefix": "legend",
+        "prefix": "<legend",
         "body": "<legend>$1</legend>$2",
         "description": "HTML - Defines a title in a fieldset"
     },
     "li": {
-        "prefix": "li",
+        "prefix": "<li",
         "body": "<li>$1</li>$2",
         "description": "HTML - Defines a list item"
     },
     "link": {
-        "prefix": "link",
+        "prefix": "<link",
         "body": "<link rel=\"$1\" type=\"$2\" href=\"$3\">$4",
         "description": "HTML - Defines a resource reference"
     },
     "main": {
-        "prefix": "main",
+        "prefix": "<main",
         "body": [
             "<main>",
             "\t$1",
@@ -1517,7 +1517,7 @@
         "description": "HTML - Defines an image map"
     },
     "map": {
-        "prefix": "map",
+        "prefix": "<map",
         "body": [
             "<map name=\"$1\">",
             "\t$2",
@@ -1526,12 +1526,12 @@
         "description": "HTML - Defines an image map"
     },
     "mark": {
-        "prefix": "mark",
+        "prefix": "<mark",
         "body": "<mark>$1</mark>$2",
         "description": "HTML - Defines marked text"
     },
     "menu": {
-        "prefix": "menu",
+        "prefix": "<menu",
         "body": [
             "<menu>",
             "\t$1",
@@ -1540,22 +1540,22 @@
         "description": "HTML - Defines a menu list"
     },
     "menuitem": {
-        "prefix": "menuitem",
+        "prefix": "<menuitem",
         "body": "<menuitem>$1</menuitem>$2",
         "description": "HTML - Defines a menu item [firefox only]"
     },
     "meta": {
-        "prefix": "meta",
+        "prefix": "<meta",
         "body": "<meta name=\"$1\" content=\"$2\">$3",
         "description": "HTML - Defines meta information"
     },
     "meter": {
-        "prefix": "meter",
+        "prefix": "<meter",
         "body": "<meter value=\"$1\">$2</meter>$3",
         "description": "HTML - Defines measurement within a predefined range"
     },
     "nav": {
-        "prefix": "nav",
+        "prefix": "<nav",
         "body": [
             "<nav>",
             "\t$1",
@@ -1564,7 +1564,7 @@
         "description": "HTML - Defines navigation links"
     },
     "noscript": {
-        "prefix": "noscript",
+        "prefix": "<noscript",
         "body": [
             "<noscript>",
             "$1",
@@ -1573,12 +1573,12 @@
         "description": "HTML - Defines a noscript section"
     },
     "object": {
-        "prefix": "object",
+        "prefix": "<object",
         "body": "<object width=\"$1\" height=\"$2\" data=\"$3\">$4</object>$5",
         "description": "HTML - Defines an embedded object"
     },
     "ol": {
-        "prefix": "ol",
+        "prefix": "<ol",
         "body": [
             "<ol>",
             "\t$1",
@@ -1587,7 +1587,7 @@
         "description": "HTML - Defines an ordered list"
     },
     "optgroup": {
-        "prefix": "optgroup",
+        "prefix": "<optgroup",
         "body": [
             "<optgroup>",
             "\t$1",
@@ -1596,27 +1596,27 @@
         "description": "HTML - Defines an option group"
     },
     "option": {
-        "prefix": "option",
+        "prefix": "<option",
         "body": "<option value=\"$1\">$2</option>$3",
         "description": "HTML - Defines an option in a drop-down list"
     },
     "output": {
-        "prefix": "output",
+        "prefix": "<output",
         "body": "<output name=\"$1\" for=\"$2\">$3</output>$4",
         "description": "HTML - Defines some types of output"
     },
     "p": {
-        "prefix": "p",
+        "prefix": "<p",
         "body": "<p>$1</p>$2",
         "description": "HTML - Defines a paragraph"
     },
     "param": {
-        "prefix": "param",
+        "prefix": "<param",
         "body": "<param name=\"$1\" value=\"$2\">$3",
         "description": "HTML - Defines a parameter for an object"
     },
     "pre": {
-        "prefix": "pre",
+        "prefix": "<pre",
         "body": [
             "<pre>",
             "$1",
@@ -1625,27 +1625,27 @@
         "description": "HTML - Defines preformatted text"
     },
     "progress": {
-        "prefix": "progress",
+        "prefix": "<progress",
         "body": "<progress value=\"$1\" max=\"$2\">$3</progress>$4",
         "description": "HTML - Defines progress of a task of any kind"
     },
     "q": {
-        "prefix": "q",
+        "prefix": "<q",
         "body": "<q>$1</q>$2",
         "description": "HTML - Defines a short quotation"
     },
     "rp": {
-        "prefix": "rp",
+        "prefix": "<rp",
         "body": "<rp>$1</rp>$2",
         "description": "HTML - Used in ruby annotations to define what to show browsers that do not support the ruby element"
     },
     "rt": {
-        "prefix": "rt",
+        "prefix": "<rt",
         "body": "<rt>$1</rt>$2",
         "description": "HTML - Defines explanation to ruby annotations"
     },
     "ruby": {
-        "prefix": "ruby",
+        "prefix": "<ruby",
         "body": [
             "<ruby>",
             "$1",
@@ -1654,17 +1654,17 @@
         "description": "HTML - Defines ruby annotations"
     },
     "s": {
-        "prefix": "s",
+        "prefix": "<s",
         "body": "<s>$1</s>$2",
         "description": "HTML - Used to define strikethrough text"
     },
     "samp": {
-        "prefix": "samp",
+        "prefix": "<samp",
         "body": "<samp>$1</samp>$2",
         "description": "HTML - Defines sample computer code"
     },
     "script": {
-        "prefix": "script",
+        "prefix": "<script",
         "body": [
             "<script>",
             "\t$1",
@@ -1673,7 +1673,7 @@
         "description": "HTML - Defines a definition list"
     },
     "section": {
-        "prefix": "section",
+        "prefix": "<section",
         "body": [
             "<section>",
             "\t$1",
@@ -1682,7 +1682,7 @@
         "description": "HTML - Defines a section"
     },
     "select": {
-        "prefix": "select",
+        "prefix": "<select",
         "body": [
             "<select>",
             "\t$1",
@@ -1691,27 +1691,27 @@
         "description": "HTML - Defines a selectable list"
     },
     "small": {
-        "prefix": "small",
+        "prefix": "<small",
         "body": "<small>$1</small>$2",
         "description": "HTML - Defines small text"
     },
     "source": {
-        "prefix": "source",
+        "prefix": "<source",
         "body": "<source src=\"$1\" type=\"$2\">$3",
         "description": "HTML - Defines media resource"
     },
     "span": {
-        "prefix": "span",
+        "prefix": "<span",
         "body": "<span>$1</span>$2",
         "description": "HTML - Defines a section in a document"
     },
     "strong": {
-        "prefix": "strong",
+        "prefix": "<strong",
         "body": "<strong>$1</strong>$2",
         "description": "HTML - Defines strong text"
     },
     "style": {
-        "prefix": "style",
+        "prefix": "<style",
         "body": [
             "<style>",
             "$1",
@@ -1720,22 +1720,22 @@
         "description": "HTML - Defines a style definition"
     },
     "sub": {
-        "prefix": "sub",
+        "prefix": "<sub",
         "body": "<sub>$1</sub>$2",
         "description": "HTML - Defines sub-scripted text"
     },
     "sup": {
-        "prefix": "sup",
+        "prefix": "<sup",
         "body": "<sup>$1</sup>$2",
         "description": "HTML - Defines super-scripted text"
     },
     "summary": {
-        "prefix": "summary",
+        "prefix": "<summary",
         "body": "<summary>$1</summary>$2",
         "description": "HTML - Defines a visible heading for the detail element [limited support]"
     },
     "table": {
-        "prefix": "table",
+        "prefix": "<table",
         "body": [
             "<table>",
             "\t$1",
@@ -1744,7 +1744,7 @@
         "description": "HTML - Defines a table"
     },
     "tbody": {
-        "prefix": "tbody",
+        "prefix": "<tbody",
         "body": [
             "<tbody>",
             "\t$1",
@@ -1753,17 +1753,17 @@
         "description": "HTML - Defines a table body"
     },
     "td": {
-        "prefix": "td",
+        "prefix": "<td",
         "body": "<td>$1</td>$2",
         "description": "HTML - Defines a table cell"
     },
     "textarea": {
-        "prefix": "textarea",
+        "prefix": "<textarea",
         "body": "<textarea rows=\"$1\" cols=\"$2\">$3</textarea>$4",
         "description": "HTML - Defines a text area"
     },
     "tfoot": {
-        "prefix": "tfoot",
+        "prefix": "<tfoot",
         "body": [
             "<tfoot>",
             "\t$1",
@@ -1772,7 +1772,7 @@
         "description": "HTML - Defines a table footer"
     },
     "thead": {
-        "prefix": "thead",
+        "prefix": "<thead",
         "body": [
             "<thead>",
             "$1",
@@ -1781,17 +1781,1177 @@
         "description": "HTML - Defines a table head"
     },
     "th": {
-        "prefix": "th",
+        "prefix": "<th",
         "body": "<th>$1</th>$2",
         "description": "HTML - Defines a table header"
     },
     "time": {
-        "prefix": "time",
+        "prefix": "<time",
         "body": "<time datetime=\"$1\">$2</time>$3",
         "description": "HTML - Defines a date/time"
     },
     "title": {
-        "prefix": "title",
+        "prefix": "<title",
         "body": "<title>$1</title>$2"
-    }
+    },
+	"bs3-alert:danger": {
+		"prefix": "bs3-alert:danger",
+		"body": "\n<div class=\"alert alert-danger\">\n\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>\n\t<strong>${1:Title!}</strong> ${2:Alert body ...}\n</div>\n",
+		"description": "Danger Alert Box"
+	},
+	"bs3-alert:info": {
+		"prefix": "bs3-alert:info",
+		"body": "\n<div class=\"alert alert-info\">\n\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>\n\t<strong>${1:Title!}</strong> ${2:Alert body ...}\n</div>\n",
+		"description": "Info Alert Box"
+	},
+	"bs3-alert:success": {
+		"prefix": "bs3-alert:success",
+		"body": "\n<div class=\"alert alert-success\">\n\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>\n\t<strong>${1:Title!}</strong> ${2:Alert body ...}\n</div>\n",
+		"description": "Success Alert Box"
+	},
+	"bs3-alert:warning": {
+		"prefix": "bs3-alert:warning",
+		"body": "\n<div class=\"alert alert-warning\">\n    <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>\n    <strong>${1:Title!}</strong> ${2:Alert body ...}\n</div>\n",
+		"description": "Warning Alert Box"
+	},
+	"bs3-alert": {
+		"prefix": "bs3-alert",
+		"body": "\n<div class=\"alert\">\n\t<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>\n\t<strong>${1:Title!}</strong> ${2:Alert body ...}\n</div>\n",
+		"description": "Alert Box (Default)"
+	},
+	"bs3-badge": {
+		"prefix": "bs3-badge",
+		"body": "\n<span class=\"badge\">${1:Badge}</span>\n",
+		"description": "Badge (Default)"
+	},
+	"bs3-block-button:danger": {
+		"prefix": "bs3-block-button:danger",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-${3:large} btn-block btn-danger\">${4:button}</${1:button}>\n",
+		"description": "Danger Block Button"
+	},
+	"bs3-block-button:default": {
+		"prefix": "bs3-block-button:default",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-${3:large} btn-block btn-default\">${4:button}</${1:button}>\n",
+		"description": "Default Block Button"
+	},
+	"bs3-block-button:disabled": {
+		"prefix": "bs3-block-button:disabled",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-${3:large} btn-block btn-{2:default} disabled\">${4:button}</${1:button}>\n",
+		"description": "Disabled Block Button"
+	},
+	"bs3-block-button:info": {
+		"prefix": "bs3-block-button:info",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-${3:large} btn-block btn-info\">${4:button}</${1:button}>\n",
+		"description": "Info Block Button"
+	},
+	"bs3-block-button:primary": {
+		"prefix": "bs3-block-button:primary",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-${3:large} btn-block btn-primary\">${4:button}</${1:button}>\n",
+		"description": "Primary Block Button"
+	},
+	"bs3-block-button:success": {
+		"prefix": "bs3-block-button:success",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-${3:large} btn-block btn-success\">${4:button}</${1:button}>\n",
+		"description": "Success Block Button"
+	},
+	"bs3-block-button:warning": {
+		"prefix": "bs3-block-button:warning",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-${3:large} btn-block btn-warning\">${4:button}</${1:button}>\n",
+		"description": "Warning Block Button"
+	},
+	"bs3-block-button": {
+		"prefix": "bs3-block-button",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-${3:large} btn-block btn-default\">${4:button}</${1:button}>\n",
+		"description": "Block Button"
+	},
+	"bs3-block-link-button:danger": {
+		"prefix": "bs3-block-link-button:danger",
+		"body": "\n<a class=\"btn btn-large btn-block btn-danger\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Danger Block Link Button"
+	},
+	"bs3-block-link-button:default": {
+		"prefix": "bs3-block-link-button:default",
+		"body": "\n<a class=\"btn btn-large btn-block btn-default\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Default Block Link Button"
+	},
+	"bs3-block-link-button:disabled": {
+		"prefix": "bs3-block-link-button:disabled",
+		"body": "\n<a class=\"btn btn-large btn-block btn-default disabled\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Disabled Block Link Button"
+	},
+	"bs3-block-link-button:info": {
+		"prefix": "bs3-block-link-button:info",
+		"body": "\n<a class=\"btn btn-large btn-block btn-info\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Info Block Link Button"
+	},
+	"bs3-block-link-button:primary": {
+		"prefix": "bs3-block-link-button:primary",
+		"body": "\n<a class=\"btn btn-large btn-block btn-primary\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Primary Block Link Button"
+	},
+	"bs3-block-link-button:success": {
+		"prefix": "bs3-block-link-button:success",
+		"body": "\n<a class=\"btn btn-large btn-block btn-success\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Success Block Link Button"
+	},
+	"bs3-block-link-button:warning": {
+		"prefix": "bs3-block-link-button:warning",
+		"body": "\n<a class=\"btn btn-large btn-block btn-warning\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Warning Block Link Button"
+	},
+	"bs3-block-link-button": {
+		"prefix": "bs3-block-link-button",
+		"body": "\n<a class=\"btn btn-large btn-block btn-default\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Block Link Button"
+	},
+	"bs3-breadcrumbs": {
+		"prefix": "bs3-breadcrumbs",
+		"body": "\n<ol class=\"breadcrumb\">\n\t<li>\n\t\t<a href=\"${1:#}\">${2:Home}</a>\n\t</li>\n\t<li class=\"active\">${3:Current}</li>\n</ol>\n",
+		"description": "Breadcrumbs"
+	},
+	"bs3-breadcrumbs-link": {
+		"prefix": "bs3-breadcrumbs-link",
+		"body": "<li>\n\t<a href=\"${1:#}\">${2:Link}</a>\n</li>",
+		"description": "Breadcrumbs link"
+	},
+	"bs3-button:danger": {
+		"prefix": "bs3-button:danger",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-danger\">${3:button}</${1:button}>\n",
+		"description": "Danger Button"
+	},
+	"bs3-button:default": {
+		"prefix": "bs3-button:default",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-default\">${3:button}</${1:button}>\n",
+		"description": "Default Button"
+	},
+	"bs3-button:disabled": {
+		"prefix": "bs3-button:disabled",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-${3:primary} disabled\">${4:button}</${1:button}>\n",
+		"description": "Disabled Button"
+	},
+	"bs3-group:vertical": {
+		"prefix": "bs3-group:vertical",
+		"body": "\n<div class=\"btn-group-vertical\">\n\t<${1:button} ${2:type=\"button\"} class=\"btn btn-default\">Top</${1:button}>\n\t<${1:button} ${2:type=\"button\"} class=\"btn btn-default\">Middle</${1:button}>\n\t<${1:button} ${2:type=\"button\"} class=\"btn btn-default\">Bottom</${1:button}>\n</div>\n",
+		"description": "Vertical Button Group"
+	},
+	"bs3-group": {
+		"prefix": "bs3-group",
+		"body": "\n<div class=\"btn-group\">\n\t<${1:button} ${2:type=\"button\"} class=\"btn btn-default\">Left</${1:button}>\n\t<${1:button} ${2:type=\"button\"} class=\"btn btn-default\">Middle</${1:button}>\n\t<${1:button} ${2:type=\"button\"} class=\"btn btn-default\">Right</${1:button}>\n</div>\n",
+		"description": "Button Group"
+	},
+	"bs3-button:info": {
+		"prefix": "bs3-button:info",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-info\">${3:button}</${1:button}>\n",
+		"description": "Info Button"
+	},
+	"bs3-button:primary": {
+		"prefix": "bs3-button:primary",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-primary\">${3:button}</${1:button}>\n",
+		"description": "Primary Button"
+	},
+	"bs3-button:success": {
+		"prefix": "bs3-button:success",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-success\">${3:button}</${1:button}>\n",
+		"description": "Success Button"
+	},
+	"bs3-toolbar": {
+		"prefix": "bs3-toolbar",
+		"body": "\n<div class=\"btn-toolbar\">\n\t<div class=\"btn-group\"></div>\n\t<div class=\"btn-group\"></div>\n\t<div class=\"btn-group\"></div>\n</div>\n",
+		"description": "Toolbar for Button Groups"
+	},
+	"bs3-button:warning": {
+		"prefix": "bs3-button:warning",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-warning\">${3:button}</${1:button}>\n",
+		"description": "Warning Button"
+	},
+	"bs3-button": {
+		"prefix": "bs3-button",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-default\">${3:button}</${1:button}>\n",
+		"description": "Button"
+	},
+	"bs3-carousel": {
+		"prefix": "bs3-carousel",
+		"body": "\n<div id=\"${1:carousel-id}\" class=\"carousel slide\" data-ride=\"carousel\">\n    <ol class=\"carousel-indicators\">\n        <li data-target=\"#${1:carousel-id}\" data-slide-to=\"0\" class=\"\"></li>\n        <li data-target=\"#${1:carousel-id}\" data-slide-to=\"1\" class=\"\"></li>\n        <li data-target=\"#${1:carousel-id}\" data-slide-to=\"2\" class=\"active\"></li>\n    </ol>\n    <div class=\"carousel-inner\">\n        <div class=\"item\">\n            <img data-src=\"holder.js/900x500/auto/#777:#7a7a7a/text:First slide\" alt=\"First slide\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojN2E3YTdhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9zdmc+\">\n            <div class=\"container\">\n                <div class=\"carousel-caption\">\n                    <h1>Example headline.</h1>\n                    <p>Note: If you're viewing this page via a <code>file://</code> URL, the \"next\" and \"previous\" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>\n                    <p><a class=\"btn btn-lg btn-primary\" href=\"#\" role=\"button\">Sign up today</a></p>\n                </div>\n            </div>\n        </div>\n        <div class=\"item\">\n            <img data-src=\"holder.js/900x500/auto/#666:#6a6a6a/text:Second slide\" alt=\"Second slide\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzY2NiI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNmE2YTZhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+U2Vjb25kIHNsaWRlPC90ZXh0Pjwvc3ZnPg==\">\n            <div class=\"container\">\n                <div class=\"carousel-caption\">\n                    <h1>Another example headline.</h1>\n                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>\n                    <p><a class=\"btn btn-lg btn-primary\" href=\"#\" role=\"button\">Learn more</a></p>\n                </div>\n            </div>\n        </div>\n        <div class=\"item active\">\n            <img data-src=\"holder.js/900x500/auto/#555:#5a5a5a/text:Third slide\" alt=\"Third slide\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI5MDAiIGhlaWdodD0iNTAwIj48cmVjdCB3aWR0aD0iOTAwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzU1NSI+PC9yZWN0Pjx0ZXh0IHRleHQtYW5jaG9yPSJtaWRkbGUiIHg9IjQ1MCIgeT0iMjUwIiBzdHlsZT0iZmlsbDojNWE1YTVhO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zaXplOjU2cHg7Zm9udC1mYW1pbHk6QXJpYWwsSGVsdmV0aWNhLHNhbnMtc2VyaWY7ZG9taW5hbnQtYmFzZWxpbmU6Y2VudHJhbCI+VGhpcmQgc2xpZGU8L3RleHQ+PC9zdmc+\">\n            <div class=\"container\">\n                <div class=\"carousel-caption\">\n                    <h1>One more for good measure.</h1>\n                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>\n                    <p><a class=\"btn btn-lg btn-primary\" href=\"#\" role=\"button\">Browse gallery</a></p>\n                </div>\n            </div>\n        </div>\n    </div>\n    <a class=\"left carousel-control\" href=\"#${1:carousel-id}\" data-slide=\"prev\"><span class=\"glyphicon glyphicon-chevron-left\"></span></a>\n    <a class=\"right carousel-control\" href=\"#${1:carousel-id}\" data-slide=\"next\"><span class=\"glyphicon glyphicon-chevron-right\"></span></a>\n</div>\n",
+		"description": "Carousel"
+	},
+	"bs3-cdn:css": {
+		"prefix": "bs3-cdn:css",
+		"body": "\n<!-- Latest compiled and minified CSS -->\n<link rel=\"stylesheet\" href=\"//netdna.bootstrapcdn.com/bootstrap/${1:3.3.4}/css/bootstrap.min.css\">\n",
+		"description": "CDN Hosted Bootstrap Link: CSS Only"
+	},
+	"bs3-cdn:js": {
+		"prefix": "bs3-cdn:js",
+		"body": "\n<!-- Latest compiled and minified JS -->\n${1:<script src=\"//code.jquery.com/jquery.js\"></script>}\n<script src=\"//netdna.bootstrapcdn.com/bootstrap/${1:3.3.4}/js/bootstrap.min.js\"></script>\n",
+		"description": "CDN Hosted Bootstrap Link: JS Only"
+	},
+	"bs3-cdn": {
+		"prefix": "bs3-cdn",
+		"body": "\n<!-- Latest compiled and minified CSS & JS -->\n<link rel=\"stylesheet\" media=\"screen\" href=\"//netdna.bootstrapcdn.com/bootstrap/${1:3.3.4}/css/bootstrap.min.css\">\n${2:<script src=\"//code.jquery.com/jquery.js\"></script>}\n<script src=\"//netdna.bootstrapcdn.com/bootstrap/${1:3.3.4}/js/bootstrap.min.js\"></script>\n",
+		"description": "CDN Hosted Bootstrap Links: CSS & JS"
+	},
+	"bs3-clearfix": {
+		"prefix": "bs3-clearfix",
+		"body": "\n<div class=\"clearfix\">\n\n</div>\n",
+		"description": "Clearfix"
+	},
+	"bs3-col:1": {
+		"prefix": "bs3-col:1",
+		"body": "\n<div class=\"col-xs-1 col-sm-1 col-md-1 col-lg-1\">\n\t${0}\n</div>\n",
+		"description": "1 Column"
+	},
+	"bs3-col:10": {
+		"prefix": "bs3-col:10",
+		"body": "\n<div class=\"col-xs-10 col-sm-10 col-md-10 col-lg-10\">\n\t${0}\n</div>\n",
+		"description": "10 Columns"
+	},
+	"bs3-col:11": {
+		"prefix": "bs3-col:11",
+		"body": "\n<div class=\"col-xs-11 col-sm-11 col-md-11 col-lg-11\">\n\t${0}\n</div>\n",
+		"description": "11 Columns"
+	},
+	"bs3-col:12": {
+		"prefix": "bs3-col:12",
+		"body": "\n<div class=\"col-xs-12 col-sm-12 col-md-12 col-lg-12\">\n\t${0}\n</div>\n",
+		"description": "12 Columns"
+	},
+	"bs3-col:2": {
+		"prefix": "bs3-col:2",
+		"body": "\n<div class=\"col-xs-2 col-sm-2 col-md-2 col-lg-2\">\n\t${0}\n</div>\n",
+		"description": "2 Columns"
+	},
+	"bs3-col:3": {
+		"prefix": "bs3-col:3",
+		"body": "\n<div class=\"col-xs-3 col-sm-3 col-md-3 col-lg-3\">\n\t${0}\n</div>\n",
+		"description": "3 Columns"
+	},
+	"bs3-col:4": {
+		"prefix": "bs3-col:4",
+		"body": "\n<div class=\"col-xs-4 col-sm-4 col-md-4 col-lg-4\">\n\t${0}\n</div>\n",
+		"description": "4 Columns"
+	},
+	"bs3-col:5": {
+		"prefix": "bs3-col:5",
+		"body": "\n<div class=\"col-xs-5 col-sm-5 col-md-5 col-lg-5\">\n\t${0}\n</div>\n",
+		"description": "5 Columns"
+	},
+	"bs3-col:6": {
+		"prefix": "bs3-col:6",
+		"body": "\n<div class=\"col-xs-6 col-sm-6 col-md-6 col-lg-6\">\n\t${0}\n</div>\n",
+		"description": "6 Columns"
+	},
+	"bs3-col:7": {
+		"prefix": "bs3-col:7",
+		"body": "\n<div class=\"col-xs-7 col-sm-7 col-md-7 col-lg-7\">\n\t${0}\n</div>\n",
+		"description": "7 Columns"
+	},
+	"bs3-col:8": {
+		"prefix": "bs3-col:8",
+		"body": "\n<div class=\"col-xs-8 col-sm-8 col-md-8 col-lg-8\">\n\t${0}\n</div>\n",
+		"description": "8 Columns"
+	},
+	"bs3-col:9": {
+		"prefix": "bs3-col:9",
+		"body": "\n<div class=\"col-xs-9 col-sm-9 col-md-9 col-lg-9\">\n\t${0}\n</div>\n",
+		"description": "9 Columns"
+	},
+	"bs3-col": {
+		"prefix": "bs3-col",
+		"body": "\n<div class=\"${2:col-xs-${1}} ${3:col-sm-${1}} ${4:col-md-${1}} ${5:col-lg-${1}}\">\n\t${0}\n</div>\n",
+		"description": "Column (no number specified)"
+	},
+	"bs3-container": {
+		"prefix": "bs3-container",
+		"body": "\n<div class=\"container\">\n\t${0}\n</div>\n",
+		"description": "Container"
+	},
+	"bs3-form:horizontal": {
+		"prefix": "bs3-form:horizontal",
+		"body": "\n<form action=\"${1}\" method=\"${2:POST}\" class=\"form-horizontal\" role=\"form\">\n\t\t<div class=\"form-group\">\n\t\t\t<legend>${3:Form title}</legend>\n\t\t</div>\n\n\t\t${0}\n\n\t\t<div class=\"form-group\">\n\t\t\t<div class=\"col-sm-10 col-sm-offset-2\">\n\t\t\t\t<button type=\"submit\" class=\"btn btn-primary\">${4:Submit}</button>\n\t\t\t</div>\n\t\t</div>\n</form>\n",
+		"description": "Horizontal Form"
+	},
+	"bs3-form:inline": {
+		"prefix": "bs3-form:inline",
+		"body": "\n<form action=\"${1}\" method=\"${2:POST}\" class=\"form-inline\" role=\"form\">\n\n\t${3:<div class=\"form-group\">\n\t\t<label class=\"sr-only\" for=\"\">label</label>\n\t\t<input type=\"email\" class=\"form-control\" id=\"\" placeholder=\"Input field\">\n\t</div>}\n\n\t${0}\n\n\t<button type=\"submit\" class=\"btn btn-primary\">${4:Submit}</button>\n</form>\n",
+		"description": "Inline Form"
+	},
+	"bs3-form:label": {
+		"prefix": "bs3-form:label",
+		"body": "\n<label for=\"${1:input-id}\" ${2:class=\"col-sm-2\"}>${3}</label>\n",
+		"description": "Label"
+	},
+	"bs3-form": {
+		"prefix": "bs3-form",
+		"body": "\n<form action=\"${1}\" method=\"${2:POST}\" role=\"form\">\n\t<legend>${3:Form title}</legend>\n\n\t<div class=\"form-group\">\n\t\t<label for=\"\">${4:label}</label>\n\t\t<input type=\"text\" class=\"form-control\" id=\"\" placeholder=\"Input field\">\n\t</div>\n\n\t${0}\n\n\t<button type=\"submit\" class=\"btn btn-primary\">${5:Submit}</button>\n</form>\n",
+		"description": "Form"
+	},
+	"bs3-template:html5": {
+		"prefix": "bs3-template:html5",
+		"body": "\n<!DOCTYPE html>\n<html lang=\"${1}\">\n\t<head>\n\t\t<meta charset=\"utf-8\">\n\t\t<meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n\t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n\t\t<title>${2:Title Page}</title>\n\n\t\t<!-- Bootstrap CSS -->\n\t\t<link href=\"${3://netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css}\" rel=\"stylesheet\">\n\n\t\t<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->\n\t\t<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\n\t\t<!--[if lt IE 9]>\n\t\t\t<script src=\"https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js\"></script>\n\t\t\t<script src=\"https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js\"></script>\n\t\t<![endif]-->\n\t</head>\n\t<body>\n\t\t<h1 class=\"text-center\">${6:Hello World}</h1>\n\n\t\t<!-- jQuery -->\n\t\t<script src=\"${4://code.jquery.com/jquery.js}\"></script>\n\t\t<!-- Bootstrap JavaScript -->\n\t\t<script src=\"${5://netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js}\"></script>\n\t</body>\n</html>\n",
+		"description": "HTML5 Template Layout"
+	},
+	"bs3-icon:glyphicon": {
+		"prefix": "bs3-icon:glyphicon",
+		"body": "\n<span class=\"glyphicon glyphicon-${1:icon}\" aria-hidden=\"true\"></span>\n",
+		"description": "Glyphicon"
+	},
+	"bs3-icon": {
+		"prefix": "bs3-icon",
+		"body": "\n<i class=\"fa fa-${1:name}${2:-${3:shape}${4:-${5:o}${6:-${7:direction}}}}\"></i>\n",
+		"description": "Icon"
+	},
+	"bs3-image": {
+		"prefix": "bs3-image",
+		"body": "\n<img src=\"${1:#}\" ${2:class=\"img-responsive\"} alt=\"${3:Image}\">\n",
+		"description": "Responsive Image"
+	},
+	"bs3-input:checkbox": {
+		"prefix": "bs3-input:checkbox",
+		"body": "\n<div class=\"checkbox\">\n\t<label>\n\t\t<input type=\"checkbox\" value=\"${1}\">\n\t\t${2:Checkbox}\n\t</label>\n</div>\n",
+		"description": "Checkbox"
+	},
+	"bs3-input:color:h": {
+		"prefix": "bs3-input:color:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"input${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${3:sm-10}\">\n\t\t<input type=\"color\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${4:value=\"${5}\"} ${6:required=\"required\"} ${7:title=\"${8}\"}>\n\t</div>\n</div>\n",
+		"description": "Color Input (Horizontal)"
+	},
+	"bs3-input:color": {
+		"prefix": "bs3-input:color",
+		"body": "\n<input type=\"color\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${2:value=\"${3}\"} ${4:required=\"required\"} ${5:title=\"${6}\"}>\n",
+		"description": "Color Input"
+	},
+	"bs3-input:date:h": {
+		"prefix": "bs3-input:date:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"input${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${3:sm-10}\">\n\t\t<input type=\"date\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${4:value=\"${5}\"} ${6:required=\"required\"} ${7:title=\"${8}\"}>\n\t</div>\n</div>\n",
+		"description": "Date Input (Horizontal)"
+	},
+	"bs3-input:date": {
+		"prefix": "bs3-input:date",
+		"body": "\n<input type=\"date\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${2:value=\"${3}\"} ${4:required=\"required\"} ${5:title=\"${6}\"}>\n",
+		"description": "Date Input"
+	},
+	"bs3-input:email:h": {
+		"prefix": "bs3-input:email:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"input${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${3:sm-10}\">\n\t\t<input type=\"email\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${4:value=\"${5}\"} ${6:required=\"required\"} ${7:title=\"${8}\"}>\n\t</div>\n</div>\n",
+		"description": "Email Input (Horizontal)"
+	},
+	"bs3-input:email": {
+		"prefix": "bs3-input:email",
+		"body": "\n<input type=\"email\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${2:value=\"${3}\"} ${4:required=\"required\"} ${5:title=\"${6}\"}>\n",
+		"description": "Email Input"
+	},
+	"bs3-input-group:addon:text": {
+		"prefix": "bs3-input-group:addon:text",
+		"body": "\n<div class=\"input-group\">\n\t<div class=\"input-group-addon\">${1:\\$}</div>\n\t<input type=\"text\" class=\"form-control\" id=\"exampleInputAmount\" placeholder=\"Amount\">\n</div>\n",
+		"description": "Input group (addon & text-field)"
+	},
+	"bs3-input-group-addon": {
+		"prefix": "bs3-input-group-addon",
+		"body": "\n<div class=\"input-group-addon\">${1:\\$}</div>\n",
+		"description": "Input group (addon)"
+	},
+	"bs3-input-group-btn": {
+		"prefix": "bs3-input-group-btn",
+		"body": "\n<span class=\"input-group-btn\">\n\t<button type=\"button\" class=\"btn btn-default\">Go!</button>\n</span>\n",
+		"description": "Input group (button)"
+	},
+	"bs3-input-group:text:btn": {
+		"prefix": "bs3-input-group:text:btn",
+		"body": "\n<div class=\"input-group\">\n\t<input type=\"text\" class=\"form-control\" id=\"exampleInputAmount\" placeholder=\"Search\">\n\t<span class=\"input-group-btn\">\n\t\t<button type=\"button\" class=\"btn btn-default\">Go!</button>\n\t</span>\n</div>\n",
+		"description": "Input group (text-field & btn)"
+	},
+	"bs3-input-group": {
+		"prefix": "bs3-input-group",
+		"body": "\n<div class=\"input-group\">\n\t${0}\n</div>\n",
+		"description": "Input Group"
+	},
+	"bs3-input:hidden": {
+		"prefix": "bs3-input:hidden",
+		"body": "\n<input type=\"hidden\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${2:value=\"${3}\"}>\n",
+		"description": "Hidden Input"
+	},
+	"bs3-input:label": {
+		"prefix": "bs3-input:label",
+		"body": "\n<label for=\"${1:input-id}\" ${2:class=\"col-sm-2\"}>${3}</label>\n",
+		"description": "Input Label"
+	},
+	"bs3-input:month:h": {
+		"prefix": "bs3-input:month:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"input${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${3:sm-10}\">\n\t\t<input type=\"month\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${4:value=\"${5}\"} ${6:required=\"required\"} ${7:title=\"${8}\"}>\n\t</div>\n</div>\n",
+		"description": "Month Input (Horizontal)"
+	},
+	"bs3-input:month": {
+		"prefix": "bs3-input:month",
+		"body": "\n<input type=\"month\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${2:value=\"${3}\"} ${4:required=\"required\"} ${5:title=\"${6}\"}>\n",
+		"description": "Month Input"
+	},
+	"bs3-input:number:h": {
+		"prefix": "bs3-input:number:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"input${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${3:sm-10}\">\n\t\t<input type=\"number\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${4:value=\"${5}\"} ${5:min=\"{6}\"} ${7:max=\"${8}\"} ${9:step=\"${10}\"} ${11:required=\"required\"} ${12:title=\"${13}\"}>\n\t</div>\n</div>\n",
+		"description": "Number Input (Horizontal)"
+	},
+	"bs3-input:number": {
+		"prefix": "bs3-input:number",
+		"body": "\n<input type=\"number\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${2:value=\"${3}\"} ${4:min=\"{5}\"} ${6:max=\"${7}\"} ${8:step=\"${9}\"} ${10:required=\"required\"} ${11:title=\"${12}\"}>\n",
+		"description": "Number Input"
+	},
+	"bs3-input:password:h": {
+		"prefix": "bs3-input:password:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"input${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${3:sm-10}\">\n\t\t<input type=\"password\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${4:required=\"required\"} ${5:title=\"${6}\"}>\n\t</div>\n</div>\n",
+		"description": "Password Input (Horizontal)"
+	},
+	"bs3-input:password": {
+		"prefix": "bs3-input:password",
+		"body": "\n<input type=\"password\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${2:required=\"required\"} ${3:title=\"${4}\"}>\n",
+		"description": "Password Input"
+	},
+	"bs3-input:radio": {
+		"prefix": "bs3-input:radio",
+		"body": "\n<div class=\"radio\">\n\t<label>\n\t\t<input type=\"radio\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" value=\"${2}\" ${3:checked=\"checked\"}>\n\t\t${4:Radio Box}\n\t</label>\n</div>\n",
+		"description": "Radio Input"
+	},
+	"bs3-input:range:h": {
+		"prefix": "bs3-input:range:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"input${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${3:sm-10}\">\n\t\t<input type=\"range\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${4:value=\"${5}\"} ${5:min=\"{6}\"} ${7:max=\"${8}\"} ${9:step=\"${10}\"} ${11:required=\"required\"} ${12:title=\"${13}\"}>\n\t</div>\n</div>\n",
+		"description": "Range Input (Horizontal)"
+	},
+	"bs3-input:range": {
+		"prefix": "bs3-input:range",
+		"body": "\n<input type=\"range\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${2:value=\"${3}\"} ${4:min=\"{5}\"} ${6:max=\"${7}\"} ${8:step=\"${9}\"} ${10:required=\"required\"} ${11:title=\"${12}\"}>\n",
+		"description": "Range Input"
+	},
+	"bs3-input:reset:h": {
+		"prefix": "bs3-input:reset:h",
+		"body": "\n<div class=\"form-group\">\n\t<div class=\"col-sm-${1:10} col-offset-${2:2}\">\n\t\t<input type=\"reset\" value=\"${3:Reset}\" class=\"btn btn-default\">\n\t</div>\n</div>\n",
+		"description": "Reset Input (Horizontal)"
+	},
+	"bs3-input:reset": {
+		"prefix": "bs3-input:reset",
+		"body": "\n<input type=\"reset\" value=\"${1:Reset}\" class=\"btn btn-default\">\n",
+		"description": "Reset Input"
+	},
+	"bs3-input:search:h": {
+		"prefix": "bs3-input:search:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"input${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${3:sm-10}\">\n\t\t<input type=\"search\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${4:value=\"${5}\"} ${6:required=\"required\"} ${7:title=\"${8}\"}>\n\t</div>\n</div>\n",
+		"description": "Search Input (Horizontal)"
+	},
+	"bs3-input:search": {
+		"prefix": "bs3-input:search",
+		"body": "\n<input type=\"search\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${2:value=\"${3}\"} ${4:required=\"required\"} ${5:title=\"${6}\"}>\n",
+		"description": "Search Input"
+	},
+	"bs3-input:select:h": {
+		"prefix": "bs3-input:select:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"input${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${3:sm-10}\">\n\t\t<select name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\">\n\t\t\t<option value=\"\">${4:-- Select One --}</option>\n\t\t</select>\n\t</div>\n</div>\n",
+		"description": ""
+	},
+	"bs3-input:select": {
+		"prefix": "bs3-input:select",
+		"body": "\n<select name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\">\n\t<option value=\"\">${2:-- Select One --}</option>\n</select>\n",
+		"description": "Select Input"
+	},
+	"bs3-input:submit:h": {
+		"prefix": "bs3-input:submit:h",
+		"body": "\n<div class=\"form-group\">\n\t<div class=\"col-${3:sm-10} col-offset-2\">\n\t\t<button type=\"submit\" class=\"btn btn-primary\">${5:Submit}</button>\n\t</div>\n</div>\n",
+		"description": "Select Input (Horizontal)"
+	},
+	"bs3-input:submit": {
+		"prefix": "bs3-input:submit",
+		"body": "\n<button type=\"submit\" class=\"btn btn-primary\">${5:Submit}</button>\n",
+		"description": "Submit Button"
+	},
+	"bs3-input:tel:h": {
+		"prefix": "bs3-input:tel:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"input${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${3:sm-10}\">\n\t\t<input type=\"tel\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${4:value=\"${5}\"} ${6:required=\"required\"} ${7:title=\"${8}\"}>\n\t</div>\n</div>\n",
+		"description": "Telephone Input (Horizontal)"
+	},
+	"bs3-input:tel": {
+		"prefix": "bs3-input:tel",
+		"body": "\n<input type=\"tel\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${2:value=\"${3}\"} ${4:required=\"required\"} ${5:title=\"${6}\"}>\n",
+		"description": "Telephone Input"
+	},
+	"bs3-input:text:h": {
+		"prefix": "bs3-input:text:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"input${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${3:sm-10}\">\n\t\t<input type=\"text\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${4:value=\"${5}\"} ${6:required=\"required\"} ${7:pattern=\"${8}\"} ${9:title=\"${10}\"}>\n\t</div>\n</div>\n",
+		"description": "Text Input (Horizontal)"
+	},
+	"bs3-input:text": {
+		"prefix": "bs3-input:text",
+		"body": "\n<input type=\"text\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${2:value=\"${3}\"} ${4:required=\"required\"} ${5:pattern=\"${6}\"} ${7:title=\"${8}\"}>\n",
+		"description": "Text Input"
+	},
+	"bs3-input:time:h": {
+		"prefix": "bs3-input:time:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"input${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${3:sm-10}\">\n\t\t<input type=\"time\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${4:value=\"${5}\"} ${6:required=\"required\"} ${7:title=\"${8}\"}>\n\t</div>\n</div>\n",
+		"description": "Time Input (Horizontal)"
+	},
+	"bs3-input:time": {
+		"prefix": "bs3-input:time",
+		"body": "\n<input type=\"time\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${2:value=\"${3}\"} ${4:required=\"required\"} ${5:title=\"${6}\"}>\n",
+		"description": "Time Input"
+	},
+	"bs3-input:url:h": {
+		"prefix": "bs3-input:url:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"input${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${3:sm-10}\">\n\t\t<input type=\"url\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${4:value=\"${5}\"} ${6:required=\"required\"} ${7:title=\"${8}\"}>\n\t</div>\n</div>\n",
+		"description": "URL Input (Horizontal)"
+	},
+	"bs3-input:url": {
+		"prefix": "bs3-input:url",
+		"body": "\n<input type=\"url\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${2:value=\"${3}\"} ${4:required=\"required\"} ${5:title=\"${6}\"}>\n",
+		"description": "URL Input"
+	},
+	"bs3-input:week:h": {
+		"prefix": "bs3-input:week:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"input${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${3:sm-10}\">\n\t\t<input type=\"week\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${4:value=\"${5}\"} ${6:required=\"required\"} ${7:title=\"${8}\"}>\n\t</div>\n</div>\n",
+		"description": "Week Input (Horizontal)"
+	},
+	"bs3-input:week": {
+		"prefix": "bs3-input:week",
+		"body": "\n<input type=\"week\" name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${2:value=\"${3}\"} ${4:required=\"required\"} ${5:title=\"${6}\"}>\n",
+		"description": "Week Input"
+	},
+	"bs3-jumbotron": {
+		"prefix": "bs3-jumbotron",
+		"body": "\n<div class=\"jumbotron\">\n\t<div class=\"container\">\n\t\t<h1>${1:Hello, world!}</h1>\n\t\t<p>${2:Contents ...}</p>\n\t\t<p>\n\t\t\t<a class=\"btn btn-primary btn-lg\">${3:Learn more}</a>\n\t\t</p>\n\t</div>\n</div>\n",
+		"description": "Jumbotron"
+	},
+	"bs3-label:danger": {
+		"prefix": "bs3-label:danger",
+		"body": "\n<span class=\"label label-danger\">${1:Label}</span>\n",
+		"description": "Danger Label"
+	},
+	"bs3-label:default": {
+		"prefix": "bs3-label:default",
+		"body": "\n<span class=\"label label-default\">${1:Label}</span>\n",
+		"description": "Default Label"
+	},
+	"bs3-label:info": {
+		"prefix": "bs3-label:info",
+		"body": "\n<span class=\"label label-info\">${1:Label}</span>\n",
+		"description": "Info Label"
+	},
+	"bs3-label:success": {
+		"prefix": "bs3-label:success",
+		"body": "\n<span class=\"label label-success\">${1:Label}</span>\n",
+		"description": "Success Label"
+	},
+	"bs3-label:warning": {
+		"prefix": "bs3-label:warning",
+		"body": "\n<span class=\"label label-warning\">${1:Label}</span>\n",
+		"description": "Warning Label"
+	},
+	"bs3-label": {
+		"prefix": "bs3-label",
+		"body": "\n<span class=\"label\">${1:Label}</span>\n",
+		"description": "Label"
+	},
+	"bs3-lg-button:danger": {
+		"prefix": "bs3-lg-button:danger",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-lg btn-danger\">${3:button}</${1:button}>\n",
+		"description": "Large Danger Button"
+	},
+	"bs3-lg-button:default": {
+		"prefix": "bs3-lg-button:default",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-lg btn-default\">${3:button}</${1:button}>\n",
+		"description": "Large Default Button"
+	},
+	"bs3-lg-button:disabled": {
+		"prefix": "bs3-lg-button:disabled",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-lg btn-${3:default} disabled\">${4:button}</${1:button}>\n",
+		"description": "Large Disabled Button"
+	},
+	"bs3-lg-button:info": {
+		"prefix": "bs3-lg-button:info",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-lg btn-info\">${3:button}</${1:button}>\n",
+		"description": "Large Info Button"
+	},
+	"bs3-lg-button:primary": {
+		"prefix": "bs3-lg-button:primary",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-lg btn-primary\">${3:button}</${1:button}>\n",
+		"description": "Large Primary Button"
+	},
+	"bs3-lg-button:success": {
+		"prefix": "bs3-lg-button:success",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-lg btn-success\">${3:button}</${1:button}>\n",
+		"description": "Large Success Button"
+	},
+	"bs3-lg-button:warning": {
+		"prefix": "bs3-lg-button:warning",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-lg btn-warning\">${3:button}</${1:button}>\n",
+		"description": "Large Warning Button"
+	},
+	"bs3-lg-button": {
+		"prefix": "bs3-lg-button",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-lg btn-default\">${3:button}</${1:button}>\n",
+		"description": "Large Button"
+	},
+	"bs3-lg-link-button:danger": {
+		"prefix": "bs3-lg-link-button:danger",
+		"body": "\n<a class=\"btn btn-lg btn-danger\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Danger Large Link Button"
+	},
+	"bs3-lg-link-button:default": {
+		"prefix": "bs3-lg-link-button:default",
+		"body": "\n<a class=\"btn btn-lg btn-default\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Default Large Link Button"
+	},
+	"bs3-lg-link-button:disabled": {
+		"prefix": "bs3-lg-link-button:disabled",
+		"body": "\n<a class=\"btn btn-lg btn-default disabled\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Disabled Large Link Button"
+	},
+	"bs3-lg-link-button:info": {
+		"prefix": "bs3-lg-link-button:info",
+		"body": "\n<a class=\"btn btn-lg btn-info\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Info Large Link Button"
+	},
+	"bs3-lg-link-button:primary": {
+		"prefix": "bs3-lg-link-button:primary",
+		"body": "\n<a class=\"btn btn-lg btn-primary\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Primary Large Link Button"
+	},
+	"bs3-lg-link-button:success": {
+		"prefix": "bs3-lg-link-button:success",
+		"body": "\n<a class=\"btn btn-lg btn-success\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Success Large Link Button"
+	},
+	"bs3-lg-link-button:warning": {
+		"prefix": "bs3-lg-link-button:warning",
+		"body": "\n<a class=\"btn btn-lg btn-warning\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Warning Large Link Button"
+	},
+	"bs3-lg-link-button": {
+		"prefix": "bs3-lg-link-button",
+		"body": "\n<a class=\"btn btn-lg btn-default\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Large Link Button"
+	},
+	"bs3-link-button:danger": {
+		"prefix": "bs3-link-button:danger",
+		"body": "\n<a class=\"btn btn-danger\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Danger Link Button"
+	},
+	"bs3-link-button:default": {
+		"prefix": "bs3-link-button:default",
+		"body": "\n<a class=\"btn btn-default\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Default Link Button"
+	},
+	"bs3-link-button:disabled": {
+		"prefix": "bs3-link-button:disabled",
+		"body": "\n<a class=\"btn btn-primary disabled\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Disabled Link Button"
+	},
+	"bs3-link-group:vertical": {
+		"prefix": "bs3-link-group:vertical",
+		"body": "\n<div class=\"btn-group-vertical\">\n\t<a class=\"btn btn-default\" href=\"#\" role=\"button\">Top</a>\n\t<a class=\"btn btn-default\" href=\"#\" role=\"button\">Middle</a>\n\t<a class=\"btn btn-default\" href=\"#\" role=\"button\">Bottom</a>\n</div>\n",
+		"description": "Vertical Link Button Group"
+	},
+	"bs3-link-group": {
+		"prefix": "bs3-link-group",
+		"body": "\n<div class=\"btn-group\">\n\t<a class=\"btn btn-default\" href=\"#\" role=\"button\">Left</a>\n\t<a class=\"btn btn-default\" href=\"#\" role=\"button\">Middle</a>\n\t<a class=\"btn btn-default\" href=\"#\" role=\"button\">Right</a>\n</div>\n",
+		"description": "Link Button Group"
+	},
+	"bs3-link-button:info": {
+		"prefix": "bs3-link-button:info",
+		"body": "\n<a class=\"btn btn-info\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Info Link Button"
+	},
+	"bs3-link-button:primary": {
+		"prefix": "bs3-link-button:primary",
+		"body": "\n<a class=\"btn btn-primary\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Primary Link Button"
+	},
+	"bs3-link-button:success": {
+		"prefix": "bs3-link-button:success",
+		"body": "\n<a class=\"btn btn-success\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Success Link Button"
+	},
+	"bs3-link-button:warning": {
+		"prefix": "bs3-link-button:warning",
+		"body": "\n<a class=\"btn btn-warning\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Warning Link Button"
+	},
+	"bs3-link-button": {
+		"prefix": "bs3-link-button",
+		"body": "\n<a class=\"btn btn-default\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Link Button"
+	},
+	"bs3-list-group:badges": {
+		"prefix": "bs3-list-group:badges",
+		"body": "\n<ul class=\"list-group\">\n\t<li class=\"list-group-item\">\n\t\t<span class=\"badge\">5</span>\n\t\tItem 1\n\t</li>\n\t<li class=\"list-group-item\">\n\t\t<span class=\"badge\">10</span>\n\t\tItem 2\n\t</li>\n\t<li class=\"list-group-item\">\n\t\t<span class=\"badge\">15</span>\n\t\tItem 3\n\t</li>\n</ul>\n",
+		"description": "List Group (with Badges)"
+	},
+	"bs3-list-group:content": {
+		"prefix": "bs3-list-group:content",
+		"body": "\n<div class=\"list-group\">\n\t<a href=\"#\" class=\"list-group-item active\">\n\t\t<h4 class=\"list-group-item-heading\">${1:List group item heading}</h4>\n\t\t<p class=\"list-group-item-text\">${2:Content goes here}</p>\n\t</a>\n</div>\n",
+		"description": "List Group (with Content)"
+	},
+	"bs3-list-group:linked": {
+		"prefix": "bs3-list-group:linked",
+		"body": "\n<div class=\"list-group\">\n\t<a href=\"#\" class=\"list-group-item active\">Item 1</a>\n\t<a href=\"#\" class=\"list-group-item\">Item 2</a>\n\t<a href=\"#\" class=\"list-group-item\">Item 3</a>\n</div>\n",
+		"description": "List Group (with Linked List)"
+	},
+	"bs3-list-group": {
+		"prefix": "bs3-list-group",
+		"body": "\n<ul class=\"list-group\">\n\t<li class=\"list-group-item\">Item 1</li>\n\t<li class=\"list-group-item\">Item 2</li>\n\t<li class=\"list-group-item\">Item 3</li>\n</ul>\n",
+		"description": "List Group"
+	},
+	"bs3-local": {
+		"prefix": "bs3-local",
+		"body": "\n<!-- Local bootstrap CSS & JS -->\n<link rel=\"stylesheet\" media=\"screen\" href=\"${1:bootstrap.min.css}\">\n${2:<script src=\"jquery.js\"></script>}\n<script src=\"${3:bootstrap.min.js}\"></script>\n",
+		"description": "Local Bootstrap Link"
+	},
+	"bs3-media-object": {
+		"prefix": "bs3-media-object",
+		"body": "\n<div class=\"media\">\n\t<a class=\"pull-left\" href=\"${1:#}\">\n\t\t<img class=\"media-object\" src=\"${2:#}\" alt=\"${3:Image}\">\n\t</a>\n\t<div class=\"media-body\">\n\t\t<h4 class=\"media-heading\">${4:Media heading}</h4>\n\t\t<p>${5:Text goes here...}</p>\n\t</div>\n</div>\n",
+		"description": "Media Object"
+	},
+	"bs3-xs-button:danger": {
+		"prefix": "bs3-xs-button:danger",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-xs btn-danger\">${3:button}</${1:button}>\n",
+		"description": "Extra Small Danger Button"
+	},
+	"bs3-xs-button:default": {
+		"prefix": "bs3-xs-button:default",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-xs btn-default\">${3:button}</${1:button}>\n",
+		"description": "Extra Small Default Button"
+	},
+	"bs3-xs-button:disabled": {
+		"prefix": "bs3-xs-button:disabled",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-xs btn-${3:default} disabled\">${4:button}</${1:button}>\n",
+		"description": "Extra Small Disabled Button"
+	},
+	"bs3-xs-button:info": {
+		"prefix": "bs3-xs-button:info",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-xs btn-info\">${3:button}</${1:button}>\n",
+		"description": "Extra Small Info Button"
+	},
+	"bs3-xs-button:primary": {
+		"prefix": "bs3-xs-button:primary",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-xs btn-primary\">${3:button}</${1:button}>\n",
+		"description": "Extra Small Primary Button"
+	},
+	"bs3-xs-button:success": {
+		"prefix": "bs3-xs-button:success",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-xs btn-success\">${3:button}</${1:button}>\n",
+		"description": "Extra Small Success Button"
+	},
+	"bs3-xs-button:warning": {
+		"prefix": "bs3-xs-button:warning",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-xs btn-warning\">${3:button}</${1:button}>\n",
+		"description": "Extra Small Warning Button"
+	},
+	"bs3-xs-button": {
+		"prefix": "bs3-xs-button",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-xs btn-default\">${3:button}</${1:button}>\n",
+		"description": "Extra Small Button"
+	},
+	"bs3-xs-link-button:danger": {
+		"prefix": "bs3-xs-link-button:danger",
+		"body": "\n<a class=\"btn btn-xs btn-danger\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Danger Extra Small Link Button"
+	},
+	"bs3-xs-link-button:default": {
+		"prefix": "bs3-xs-link-button:default",
+		"body": "\n<a class=\"btn btn-xs btn-default\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Default Extra Small Link Button"
+	},
+	"bs3-xs-link-button:disabled": {
+		"prefix": "bs3-xs-link-button:disabled",
+		"body": "\n<a class=\"btn btn-xs btn-default disabled\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Disabled Extra Small Link Button"
+	},
+	"bs3-xs-link-button:info": {
+		"prefix": "bs3-xs-link-button:info",
+		"body": "\n<a class=\"btn btn-xs btn-info\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Info Extra Small Link Button"
+	},
+	"bs3-xs-link-button:primary": {
+		"prefix": "bs3-xs-link-button:primary",
+		"body": "\n<a class=\"btn btn-xs btn-primary\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Primary Extra Small Link Button"
+	},
+	"bs3-xs-link-button:success": {
+		"prefix": "bs3-xs-link-button:success",
+		"body": "\n<a class=\"btn btn-xs btn-success\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Success Extra Small Link Button"
+	},
+	"bs3-xs-link-button:warning": {
+		"prefix": "bs3-xs-link-button:warning",
+		"body": "\n<a class=\"btn btn-xs btn-warning\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Warning Extra Small Link Button"
+	},
+	"bs3-xs-link-button": {
+		"prefix": "bs3-xs-link-button",
+		"body": "\n<a class=\"btn btn-xs btn-default\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Extra Small Link Button"
+	},
+	"bs3-modal": {
+		"prefix": "bs3-modal",
+		"body": "\n${1:<a class=\"btn btn-primary\" data-toggle=\"modal\" href='#${2:modal-id}'>Trigger modal</a>}\n<div class=\"modal fade\" id=\"${2:modal-id}\">\n\t<div class=\"modal-dialog\">\n\t\t<div class=\"modal-content\">\n\t\t\t<div class=\"modal-header\">\n\t\t\t\t<button type=\"button\" class=\"close\" data-dismiss=\"modal\" aria-hidden=\"true\">&times;</button>\n\t\t\t\t<h4 class=\"modal-title\">${3:Modal title}</h4>\n\t\t\t</div>\n\t\t\t<div class=\"modal-body\">\n\t\t\t\t${0}\n\t\t\t</div>\n\t\t\t<div class=\"modal-footer\">\n\t\t\t\t<button type=\"button\" class=\"btn btn-default\" data-dismiss=\"modal\">${4:Close}</button>\n\t\t\t\t<button type=\"button\" class=\"btn btn-primary\">${5:Save changes}</button>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</div>\n",
+		"description": "Modal"
+	},
+	"bs3-navbar:basic": {
+		"prefix": "bs3-navbar:basic",
+		"body": "\n<div class=\"navbar\">\n\t<a class=\"navbar-brand\" href=\"#\">${1:Title}</a>\n\t<ul class=\"nav navbar-nav\">\n\t\t<li class=\"active\">\n\t\t\t<a href=\"#\">${2:Home}</a>\n\t\t</li>\n\t\t<li>\n\t\t\t<a href=\"#\">${3:Link}</a>\n\t\t</li>\n\t</ul>\n</div>\n",
+		"description": "Navbar (Basic)"
+	},
+	"bs3-navbar:brand": {
+		"prefix": "bs3-navbar:brand",
+		"body": "\n<a class=\"navbar-brand\" href=\"${1:/}\">${2:Title}</a>\n",
+		"description": "Navbar Brand Element"
+	},
+	"bs3-navbar:fixed-bottom": {
+		"prefix": "bs3-navbar:fixed-bottom",
+		"body": "\n<nav class=\"navbar navbar-default navbar-fixed-bottom\" role=\"navigation\">\n\t<a class=\"navbar-brand\" href=\"${1:#}\">${2:Title}</a>\n\t<ul class=\"nav navbar-nav\">\n\t\t<li class=\"active\">\n\t\t\t<a href=\"#\">${3:Home}</a>\n\t\t</li>\n\t\t<li>\n\t\t\t<a href=\"#\">${4:Link}</a>\n\t\t</li>\n\t</ul>\n</nav>\n",
+		"description": "Navbar Fixed-Bottom"
+	},
+	"bs3-navbar:fixed-top": {
+		"prefix": "bs3-navbar:fixed-top",
+		"body": "\n<nav class=\"navbar navbar-default navbar-fixed-top\" role=\"navigation\">\n\t<a class=\"navbar-brand\" href=\"${1:#}\">${2:Title}</a>\n\t<ul class=\"nav navbar-nav\">\n\t\t<li class=\"active\">\n\t\t\t<a href=\"#\">${3:Home}</a>\n\t\t</li>\n\t\t<li>\n\t\t\t<a href=\"#\">${4:Link}</a>\n\t\t</li>\n\t</ul>\n</nav>\n",
+		"description": "Navbar Fixed-Top"
+	},
+	"bs3-navbar:form": {
+		"prefix": "bs3-navbar:form",
+		"body": "\n<form class=\"navbar-form pull-${1:right}\">\n\t<input type=\"text\" style=\"width: 200px;\">\n\t<button type=\"submit\" class=\"btn btn-${2:default}\">${3:Submit}</button>\n</form>\n",
+		"description": "Navbar Form"
+	},
+	"bs3-navbar:inverse": {
+		"prefix": "bs3-navbar:inverse",
+		"body": "\n<nav class=\"navbar navbar-inverse\">\n\t<a class=\"navbar-brand\" href=\"#\">${1:Title}</a>\n\t<ul class=\"nav navbar-nav\">\n\t\t<li class=\"active\">\n\t\t\t<a href=\"#\">${2:Home}</a>\n\t\t</li>\n\t\t<li>\n\t\t\t<a href=\"#\">${3:Link}</a>\n\t\t</li>\n\t</ul>\n</nav>\n",
+		"description": "Navbar Inverse"
+	},
+	"bs3-navbar:link": {
+		"prefix": "bs3-navbar:link",
+		"body": "\n<p class=\"navbar-text pull-${1:right}\">\n\t<a href=\"${2:#}\" class=\"navbar-link\">${3:Links}</a>\n</p>\n",
+		"description": "Navbar Link"
+	},
+	"bs3-navbar:links": {
+		"prefix": "bs3-navbar:links",
+		"body": "\n<ul class=\"nav navbar-nav\">\n\t<li class=\"active\">\n\t\t<a href=\"${1:#}\">${2:Home}</a>\n\t</li>\n\t<li>\n\t\t<a href=\"${3:#}\">${4:Link}</a>\n\t</li>\n</ul>\n",
+		"description": "Navbar Links"
+	},
+	"bs3-navbar:responsive": {
+		"prefix": "bs3-navbar:responsive",
+		"body": "\n<nav class=\"navbar navbar-default\" role=\"navigation\">\n\t<!-- Brand and toggle get grouped for better mobile display -->\n\t<div class=\"navbar-header\">\n\t\t<button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\n\t\t\t<span class=\"sr-only\">Toggle navigation</span>\n\t\t\t<span class=\"icon-bar\"></span>\n\t\t\t<span class=\"icon-bar\"></span>\n\t\t\t<span class=\"icon-bar\"></span>\n\t\t</button>\n\t\t<a class=\"navbar-brand\" href=\"${1:#}\">${2:Title}</a>\n\t</div>\n\n\t<!-- Collect the nav links, forms, and other content for toggling -->\n\t<div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n\t\t<ul class=\"nav navbar-nav\">\n\t\t\t<li class=\"active\"><a href=\"#\">Link</a></li>\n\t\t\t<li><a href=\"#\">Link</a></li>\n\t\t</ul>\n\t\t<form class=\"navbar-form navbar-left\" role=\"search\">\n\t\t\t<div class=\"form-group\">\n\t\t\t\t<input type=\"text\" class=\"form-control\" placeholder=\"Search\">\n\t\t\t</div>\n\t\t\t<button type=\"submit\" class=\"btn btn-default\">Submit</button>\n\t\t</form>\n\t\t<ul class=\"nav navbar-nav navbar-right\">\n\t\t\t<li><a href=\"#\">Link</a></li>\n\t\t\t<li class=\"dropdown\">\n\t\t\t\t<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Dropdown <b class=\"caret\"></b></a>\n\t\t\t\t<ul class=\"dropdown-menu\">\n\t\t\t\t\t<li><a href=\"#\">Action</a></li>\n\t\t\t\t\t<li><a href=\"#\">Another action</a></li>\n\t\t\t\t\t<li><a href=\"#\">Something else here</a></li>\n\t\t\t\t\t<li><a href=\"#\">Separated link</a></li>\n\t\t\t\t</ul>\n\t\t\t</li>\n\t\t</ul>\n\t</div><!-- /.navbar-collapse -->\n</nav>\n",
+		"description": "Navbar Responsive"
+	},
+	"bs3-navbar:static-top": {
+		"prefix": "bs3-navbar:static-top",
+		"body": "\n<nav class=\"navbar navbar-default navbar-static-top\" role=\"navigation\">\n\t<a class=\"navbar-brand\" href=\"${1:#}\">${2:Title}</a>\n\t<ul class=\"nav navbar-nav\">\n\t\t<li class=\"active\">\n\t\t\t<a href=\"#\">${3:Home}</a>\n\t\t</li>\n\t\t<li>\n\t\t\t<a href=\"#\">${4:Link}</a>\n\t\t</li>\n\t</ul>\n</nav>\n",
+		"description": "Navbar Static-Top"
+	},
+	"bs3-navbar:text": {
+		"prefix": "bs3-navbar:text",
+		"body": "\n<p class=\"navbar-text\">${1:Navbar text}</p>\n",
+		"description": "Navbar Text"
+	},
+	"bs3-navbar": {
+		"prefix": "bs3-navbar",
+		"body": "\n<nav class=\"navbar navbar-default\" role=\"navigation\">\n\t<!-- Brand and toggle get grouped for better mobile display -->\n\t<div class=\"navbar-header\">\n\t\t<button type=\"button\" class=\"navbar-toggle\" data-toggle=\"collapse\" data-target=\".navbar-ex1-collapse\">\n\t\t\t<span class=\"sr-only\">Toggle navigation</span>\n\t\t\t<span class=\"icon-bar\"></span>\n\t\t\t<span class=\"icon-bar\"></span>\n\t\t\t<span class=\"icon-bar\"></span>\n\t\t</button>\n\t\t<a class=\"navbar-brand\" href=\"${1:#}\">${2:Title}</a>\n\t</div>\n\n\t<!-- Collect the nav links, forms, and other content for toggling -->\n\t<div class=\"collapse navbar-collapse navbar-ex1-collapse\">\n\t\t<ul class=\"nav navbar-nav\">\n\t\t\t<li class=\"active\"><a href=\"#\">Link</a></li>\n\t\t\t<li><a href=\"#\">Link</a></li>\n\t\t</ul>\n\t\t<form class=\"navbar-form navbar-left\" role=\"search\">\n\t\t\t<div class=\"form-group\">\n\t\t\t\t<input type=\"text\" class=\"form-control\" placeholder=\"Search\">\n\t\t\t</div>\n\t\t\t<button type=\"submit\" class=\"btn btn-default\">Submit</button>\n\t\t</form>\n\t\t<ul class=\"nav navbar-nav navbar-right\">\n\t\t\t<li><a href=\"#\">Link</a></li>\n\t\t\t<li class=\"dropdown\">\n\t\t\t\t<a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\">Dropdown <b class=\"caret\"></b></a>\n\t\t\t\t<ul class=\"dropdown-menu\">\n\t\t\t\t\t<li><a href=\"#\">Action</a></li>\n\t\t\t\t\t<li><a href=\"#\">Another action</a></li>\n\t\t\t\t\t<li><a href=\"#\">Something else here</a></li>\n\t\t\t\t\t<li><a href=\"#\">Separated link</a></li>\n\t\t\t\t</ul>\n\t\t\t</li>\n\t\t</ul>\n\t</div><!-- /.navbar-collapse -->\n</nav>\n",
+		"description": "Navbar"
+	},
+	"bs3-page-header": {
+		"prefix": "bs3-page-header",
+		"body": "\n<div class=\"page-header\">\n  <h1>${1:title}<small>${2:subtext}</small></h1>\n</div>\n",
+		"description": "Page Header"
+	},
+	"bs3-pager:aligned": {
+		"prefix": "bs3-pager:aligned",
+		"body": "\n<ul class=\"pager\">\n\t<li class=\"previous\"><a href=\"#\">&larr; Older</a></li>\n\t<li class=\"next\"><a href=\"#\">Newer &rarr;</a></li>\n</ul>\n",
+		"description": "Aligned Pager"
+	},
+	"bs3-pager": {
+		"prefix": "bs3-pager",
+		"body": "\n<ul class=\"pager\">\n\t<li><a href=\"#\">Previous</a></li>\n\t<li><a href=\"#\">Next</a></li>\n</ul>\n",
+		"description": "Pager"
+	},
+	"bs3-pagination:lg": {
+		"prefix": "bs3-pagination:lg",
+		"body": "\n<ul class=\"pagination pagination-lg\">\n\t<li><a href=\"#\">&laquo;</a></li>\n\t<li><a href=\"#\">1</a></li>\n\t<li><a href=\"#\">2</a></li>\n\t<li><a href=\"#\">3</a></li>\n\t<li><a href=\"#\">4</a></li>\n\t<li><a href=\"#\">5</a></li>\n\t<li><a href=\"#\">&raquo;</a></li>\n</ul>\n",
+		"description": "Pagination (Large)"
+	},
+	"bs3-pagination:sm": {
+		"prefix": "bs3-pagination:sm",
+		"body": "\n<ul class=\"pagination pagination-sm\">\n\t<li><a href=\"#\">&laquo;</a></li>\n\t<li><a href=\"#\">1</a></li>\n\t<li><a href=\"#\">2</a></li>\n\t<li><a href=\"#\">3</a></li>\n\t<li><a href=\"#\">4</a></li>\n\t<li><a href=\"#\">5</a></li>\n\t<li><a href=\"#\">&raquo;</a></li>\n</ul>\n",
+		"description": "Pagination (Small)"
+	},
+	"bs3-pagination": {
+		"prefix": "bs3-pagination",
+		"body": "\n<ul class=\"pagination\">\n\t<li><a href=\"#\">&laquo;</a></li>\n\t<li><a href=\"#\">1</a></li>\n\t<li><a href=\"#\">2</a></li>\n\t<li><a href=\"#\">3</a></li>\n\t<li><a href=\"#\">4</a></li>\n\t<li><a href=\"#\">5</a></li>\n\t<li><a href=\"#\">&raquo;</a></li>\n</ul>\n",
+		"description": "Pagination"
+	},
+	"bs3-panel:danger": {
+		"prefix": "bs3-panel:danger",
+		"body": "\n<div class=\"panel panel-${1:danger}\">\n\t  <div class=\"panel-heading\">\n\t\t\t<h3 class=\"panel-title\">Panel title</h3>\n\t  </div>\n\t  <div class=\"panel-body\">\n\t\t\t${2:Panel content}\n\t  </div>\n</div>\n",
+		"description": "Panel (Danger)"
+	},
+	"bs3-panel:footer": {
+		"prefix": "bs3-panel:footer",
+		"body": "\n<div class=\"panel panel-default\">\n\t  <div class=\"panel-body\">\n\t\t\t${1:Panel content}\n\t  </div>\n\t  <div class=\"panel-footer\">\n\t\t\t${2:Panel footer}\n\t\t</div>\n</div>\n",
+		"description": "Panel (with Footer)"
+	},
+	"bs3-panel:heading": {
+		"prefix": "bs3-panel:heading",
+		"body": "\n<div class=\"panel panel-${1:default}\">\n\t  <div class=\"panel-heading\">\n\t\t\t<h3 class=\"panel-title\">Panel title</h3>\n\t  </div>\n\t  <div class=\"panel-body\">\n\t\t\t${2:Panel content}\n\t  </div>\n</div>\n",
+		"description": "Panel (with Heading)"
+	},
+	"bs3-panel:info": {
+		"prefix": "bs3-panel:info",
+		"body": "\n<div class=\"panel panel-${1:info}\">\n\t  <div class=\"panel-heading\">\n\t\t\t<h3 class=\"panel-title\">Panel title</h3>\n\t  </div>\n\t  <div class=\"panel-body\">\n\t\t\t${2:Panel content}\n\t  </div>\n</div>\n",
+		"description": "Panel (Info)"
+	},
+	"bs3-panel:primary": {
+		"prefix": "bs3-panel:primary",
+		"body": "\n<div class=\"panel panel-${1:primary}\">\n\t  <div class=\"panel-heading\">\n\t\t\t<h3 class=\"panel-title\">Panel title</h3>\n\t  </div>\n\t  <div class=\"panel-body\">\n\t\t\t${2:Panel content}\n\t  </div>\n</div>\n",
+		"description": "Panel (Primary)"
+	},
+	"bs3-panel:success": {
+		"prefix": "bs3-panel:success",
+		"body": "\n<div class=\"panel panel-${1:success}\">\n\t  <div class=\"panel-heading\">\n\t\t\t<h3 class=\"panel-title\">Panel title</h3>\n\t  </div>\n\t  <div class=\"panel-body\">\n\t\t\t${2:Panel content}\n\t  </div>\n</div>\n",
+		"description": "Panel (Success)"
+	},
+	"bs3-panel:table": {
+		"prefix": "bs3-panel:table",
+		"body": "\n<div class=\"panel panel-${1:default}\">\n\t<!-- Default panel contents -->\n\t<div class=\"panel-heading\">Panel heading</div>\n\t\t<div class=\"panel-body\">\n\t\t\t<p>Text goes here...</p>\n\t\t</div>\n\n\t\t<!-- Table -->\n\t\t<table class=\"table\">\n\t\t\t<thead>\n\t\t\t\t<tr>\n\t\t\t\t\t<th>${2:Heading 1}</th>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<th>${3:Heading 2}</th>\n\t\t\t\t</tr>\n\t\t\t</thead>\n\t\t\t<tbody>\n\t\t\t\t<tr>\n\t\t\t\t\t<td>${4:Content 1}</td>\n\t\t\t\t</tr>\n\t\t\t\t<tr>\n\t\t\t\t\t<td>${5:Content 2}</td>\n\t\t\t\t</tr>\n\t\t\t</tbody>\n\t\t</table>\n</div>\n",
+		"description": "Panel (with Table)"
+	},
+	"bs3-panel:warning": {
+		"prefix": "bs3-panel:warning",
+		"body": "\n<div class=\"panel panel-${1:warning}\">\n\t  <div class=\"panel-heading\">\n\t\t\t<h3 class=\"panel-title\">Panel title</h3>\n\t  </div>\n\t  <div class=\"panel-body\">\n\t\t\t${2:Panel content}\n\t  </div>\n</div>\n",
+		"description": "Panel (Warning)"
+	},
+	"bs3-panel": {
+		"prefix": "bs3-panel",
+		"body": "\n<div class=\"panel panel-${1:default}\">\n\t<div class=\"panel-body\">\n\t   ${2:Basic panel example}\n\t</div>\n</div>\n",
+		"description": "Panel"
+	},
+	"bs3-row-col": {
+		"prefix": "bs3-row-col",
+		"body": "\n<div class=\"row\">\n\t<div class=\"${2:col-xs-${1}} ${3:col-sm-${1}} ${4:col-md-${1}} ${5:col-lg-${1}}\">\n\t\t${0}\n\t</div>\n</div>\n",
+		"description": "Row & Column (no number specified)"
+	},
+	"bs3-row": {
+		"prefix": "bs3-row",
+		"body": "\n<div class=\"row\">\n\t${0}\n</div>\n",
+		"description": "Row"
+	},
+	"bs3-select:h": {
+		"prefix": "bs3-select:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"input${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${2:sm-10}\">\n\t\t<select name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${3:required=\"required\"}>\n\t\t\t<option value=\"\">${0}</option>\n\t\t</select>\n\t</div>\n</div>\n",
+		"description": "Select (Horizontal)"
+	},
+	"bs3-select": {
+		"prefix": "bs3-select",
+		"body": "\n<select name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" ${2:required=\"required\"}>\n\t<option value=\"\">${0}</option>\n</select>\n",
+		"description": "Select"
+	},
+	"bs3-sm-button:danger": {
+		"prefix": "bs3-sm-button:danger",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-sm btn-danger\">${3:button}</${1:button}>\n",
+		"description": "Small Danger Button"
+	},
+	"bs3-sm-button:default": {
+		"prefix": "bs3-sm-button:default",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-sm btn-default\">${3:button}</${1:button}>\n",
+		"description": "Small Default Button"
+	},
+	"bs3-sm-button:disabled": {
+		"prefix": "bs3-sm-button:disabled",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-sm btn-${3:default} disabled\">${4:button}</${1:button}>\n",
+		"description": "Small Disabled Button"
+	},
+	"bs3-sm-button:info": {
+		"prefix": "bs3-sm-button:info",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-sm btn-info\">${3:button}</${1:button}>\n",
+		"description": "Small Info Button"
+	},
+	"bs3-sm-button:primary": {
+		"prefix": "bs3-sm-button:primary",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-sm btn-primary\">${3:button}</${1:button}>\n",
+		"description": "Small Primary Button"
+	},
+	"bs3-sm-button:success": {
+		"prefix": "bs3-sm-button:success",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-sm btn-success\">${3:button}</${1:button}>\n",
+		"description": "Small Success Button"
+	},
+	"bs3-sm-button:warning": {
+		"prefix": "bs3-sm-button:warning",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-sm btn-warning\">${3:button}</${1:button}>\n",
+		"description": "Small Warning Button"
+	},
+	"bs3-sm-button": {
+		"prefix": "bs3-sm-button",
+		"body": "\n<${1:button} ${2:type=\"button\"} class=\"btn btn-sm btn-default\">${3:button}</${1:button}>\n",
+		"description": "Small Button"
+	},
+	"bs3-sm-link-button:danger": {
+		"prefix": "bs3-sm-link-button:danger",
+		"body": "\n<a class=\"btn btn-sm btn-danger\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Danger Small Link Button"
+	},
+	"bs3-sm-link-button:default": {
+		"prefix": "bs3-sm-link-button:default",
+		"body": "\n<a class=\"btn btn-sm btn-default\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Default Small Link Button"
+	},
+	"bs3-sm-link-button:disabled": {
+		"prefix": "bs3-sm-link-button:disabled",
+		"body": "\n<a class=\"btn btn-sm btn-default disabled\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Disabled Small Link Button"
+	},
+	"bs3-sm-link-button:info": {
+		"prefix": "bs3-sm-link-button:info",
+		"body": "\n<a class=\"btn btn-sm btn-info\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Info Small Link Button"
+	},
+	"bs3-sm-link-button:primary": {
+		"prefix": "bs3-sm-link-button:primary",
+		"body": "\n<a class=\"btn btn-sm btn-primary\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Primary Small Link Button"
+	},
+	"bs3-sm-link-button:success": {
+		"prefix": "bs3-sm-link-button:success",
+		"body": "\n<a class=\"btn btn-sm btn-success\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Success Small Link Button"
+	},
+	"bs3-sm-link-button:warning": {
+		"prefix": "bs3-sm-link-button:warning",
+		"body": "\n<a class=\"btn btn-sm btn-warning\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Warning Small Link Button"
+	},
+	"bs3-sm-link-button": {
+		"prefix": "bs3-sm-link-button",
+		"body": "\n<a class=\"btn btn-sm btn-default\" href=\"#\" role=\"button\">button</a>\n",
+		"description": "Small Link Button"
+	},
+	"bs3-table:bordered": {
+		"prefix": "bs3-table:bordered",
+		"body": "\n<table class=\"table table-bordered ${1:table-hover}\">\n\t<thead>\n\t\t<tr>\n\t\t\t<th></th>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td></td>\n\t\t</tr>\n\t</tbody>\n</table>\n",
+		"description": "Bordered Table"
+	},
+	"bs3-table:condensed": {
+		"prefix": "bs3-table:condensed",
+		"body": "\n<table class=\"table table-condensed ${1:table-hover}\">\n\t<thead>\n\t\t<tr>\n\t\t\t<th></th>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td></td>\n\t\t</tr>\n\t</tbody>\n</table>\n",
+		"description": "Condensed Table"
+	},
+	"bs3-table:hover": {
+		"prefix": "bs3-table:hover",
+		"body": "\n<table class=\"table table-hover\">\n\t<thead>\n\t\t<tr>\n\t\t\t<th></th>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td></td>\n\t\t</tr>\n\t</tbody>\n</table>\n",
+		"description": "Hover Table"
+	},
+	"bs3-table:responsive": {
+		"prefix": "bs3-table:responsive",
+		"body": "\n<div class=\"table-responsive\">\n\t<table class=\"table${1: table-hover}\">\n\t\t<thead>\n\t\t\t<tr>\n\t\t\t\t<th></th>\n\t\t\t</tr>\n\t\t</thead>\n\t\t<tbody>\n\t\t\t<tr>\n\t\t\t\t<td></td>\n\t\t\t</tr>\n\t\t</tbody>\n\t</table>\n</div>\n",
+		"description": "Responsive Table"
+	},
+	"bs3-table:striped": {
+		"prefix": "bs3-table:striped",
+		"body": "\n<table class=\"table table-striped ${1:table-hover}\">\n\t<thead>\n\t\t<tr>\n\t\t\t<th></th>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td></td>\n\t\t</tr>\n\t</tbody>\n</table>\n",
+		"description": "Striped Table"
+	},
+	"bs3-table": {
+		"prefix": "bs3-table",
+		"body": "\n<table class=\"table${1: table-hover}\">\n\t<thead>\n\t\t<tr>\n\t\t\t<th></th>\n\t\t</tr>\n\t</thead>\n\t<tbody>\n\t\t<tr>\n\t\t\t<td></td>\n\t\t</tr>\n\t</tbody>\n</table>\n",
+		"description": "Table"
+	},
+	"bs3-tabs": {
+		"prefix": "bs3-tabs",
+		"body": "\n<div role=\"tabpanel\">\n    <!-- Nav tabs -->\n    <ul class=\"nav nav-tabs\" role=\"tablist\">\n        <li role=\"presentation\" class=\"active\">\n            <a href=\"#${1:home}\" aria-controls=\"${1:home}\" role=\"tab\" data-toggle=\"tab\">${1:home}</a>\n        </li>\n        <li role=\"presentation\">\n            <a href=\"#${2:tab}\" aria-controls=\"${2:tab}\" role=\"tab\" data-toggle=\"tab\">${2:tab}</a>\n        </li>\n    </ul>\n\n    <!-- Tab panes -->\n    <div class=\"tab-content\">\n        <div role=\"tabpanel\" class=\"tab-pane active\" id=\"${1:home}\">...</div>\n        <div role=\"tabpanel\" class=\"tab-pane\" id=\"${2:tab}\">...</div>\n    </div>\n</div>\n",
+		"description": "Tabs"
+	},
+	"bs3-textarea:h": {
+		"prefix": "bs3-textarea:h",
+		"body": "\n<div class=\"form-group\">\n\t<label for=\"textarea${1/(\\w+)/\\u\\1/g}\" class=\"col-${2:sm-2} control-label\">${1/(\\w+)/\\u\\1/g}:</label>\n\t<div class=\"col-${3:sm-10}\">\n\t\t<textarea name=\"${1}\" id=\"textarea${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" rows=\"${4:3}\" ${5:required=\"required\"}>${6}</textarea>\n\t</div>\n</div>\n",
+		"description": "Textarea (Horizontal)"
+	},
+	"bs3-textarea": {
+		"prefix": "bs3-textarea",
+		"body": "\n<textarea name=\"${1}\" id=\"input${1/(\\w+)/\\u\\1/g}\" class=\"form-control\" rows=\"${2:3}\" ${3:required=\"required\"}>${4}</textarea>\n",
+		"description": "Textarea"
+	},
+	"bs3-thumbnail:content": {
+		"prefix": "bs3-thumbnail:content",
+		"body": "\n<div class=\"col-xs-${1:3} col-sm-${1:3} col-md-${1:3} col-lg-${1:3}\">\n\t<div class=\"thumbnail\">\n\t\t<img data-src=\"${2:#}\" alt=\"${3}\">\n\t\t<div class=\"caption\">\n\t\t\t<h3>${4:Title}</h3>\n\t\t\t<p>\n\t\t\t\t${5:...}\n\t\t\t</p>\n\t\t\t<p>\n\t\t\t\t<a href=\"${6:#}\" class=\"btn btn-primary\">${7:Action}</a>\n\t\t\t\t<a href=\"${8:#}\" class=\"btn btn-default\">${9:Action}</a>\n\t\t\t</p>\n\t\t</div>\n\t</div>\n</div>\n",
+		"description": "Thumbnail (with Content)"
+	},
+	"bs3-thumbnail": {
+		"prefix": "bs3-thumbnail",
+		"body": "\n<div class=\"col-xs-${1:3} col-sm-${1:3} col-md-${1:3} col-lg-${1:3}\">\n\t<a href=\"${2:#}\" class=\"thumbnail\">\n\t\t<img data-src=\"${3:#}\" alt=\"${4}\">\n\t</a>\n</div>\n",
+		"description": "Thumbnail"
+	},
+	"bs3-well:lg": {
+		"prefix": "bs3-well:lg",
+		"body": "\n<div class=\"well well-lg\">\n\t${0}\n</div>\n",
+		"description": "Large Well"
+	},
+	"bs3-well:sm": {
+		"prefix": "bs3-well:sm",
+		"body": "\n<div class=\"well well-sm\">\n\t${0}\n</div>\n",
+		"description": "Small Well"
+	},
+	"bs3-well": {
+		"prefix": "bs3-well",
+		"body": "\n<div class=\"well\">\n\t${0}\n</div>\n",
+		"description": "Well"
+	},
+	"bs3-progress": {
+		"prefix": "bs3-progress",
+		"body": "\n<div class=\"progress\">\n\t<div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"${1}\" aria-valuemin=\"${2}\" aria-valuemax=\"${3}\" style=\"width: ${4};\">\n\t\t<span class=\"sr-only\"> ${5: % Complete}</span>\n\t</div>\n</div>\n",
+		"description": "Progress Bar"
+	},
+    "bs3-progress-striped": {
+		"prefix": "bs3-progress-striped",
+		"body": "\n<div class=\"progress\">\n\t<div class=\"progress-bar progress-bar-striped\" role=\"progressbar\" aria-valuenow=\"${1}\" aria-valuemin=\"${2}\" aria-valuemax=\"${3}\" style=\"width: ${4};\">\n\t\t<span class=\"sr-only\"> ${5: % Complete}</span>\n\t</div>\n</div>\n",
+		"description": "Striped Progress Bar"
+	},
+    "bs3-progress:label": {
+		"prefix": "bs3-progress:label",
+		"body": "\n<div class=\"progress\">\n\t<div class=\"progress-bar\" role=\"progressbar\" aria-valuenow=\"${1}\" aria-valuemin=\"${2}\" aria-valuemax=\"${3}\" style=\"min-width: ${4}; width: ${5};\">\n\t\t ${6: % Complete}\n\t</div>\n</div>\n",
+		"description": "Progress Bar with Label"
+	},
+    "bs3-progress-striped:label": {
+		"prefix": "bs3-progress-striped:label",
+		"body": "\n<div class=\"progress\">\n\t<div class=\"progress-bar progress-bar-striped\" role=\"progressbar\" aria-valuenow=\"${1}\" aria-valuemin=\"${2}\" aria-valuemax=\"${3}\" style=\"min-width: ${4}; width: ${5};\">\n\t\t ${6: % Complete}\n\t</div>\n</div>\n",
+		"description": "Striped Progress Bar with Label"
+	},
+    "bs3-progress:success": {
+		"prefix": "bs3-progress:success",
+		"body": "\n<div class=\"progress\">\n\t<div class=\"progress-bar progress-bar-success\" role=\"progressbar\" aria-valuenow=\"${1}\" aria-valuemin=\"${2}\" aria-valuemax=\"${3}\" style=\"width: ${4};\">\n\t\t<span class=\"sr-only\"> ${5: % Complete}</span>\n\t</div>\n</div>\n",
+		"description": "Success Progress Bar"
+	},
+    "bs3-progress:info": {
+		"prefix": "bs3-progress:info",
+		"body": "\n<div class=\"progress\">\n\t<div class=\"progress-bar progress-bar-info\" role=\"progressbar\" aria-valuenow=\"${1}\" aria-valuemin=\"${2}\" aria-valuemax=\"${3}\" style=\"width: ${4};\">\n\t\t<span class=\"sr-only\"> ${5: % Complete}</span>\n\t</div>\n</div>\n",
+		"description": "Info Progress Bar"
+	},
+    "bs3-progress:warning": {
+		"prefix": "bs3-progress:warning",
+		"body": "\n<div class=\"progress\">\n\t<div class=\"progress-bar progress-bar-warning\" role=\"progressbar\" aria-valuenow=\"${1}\" aria-valuemin=\"${2}\" aria-valuemax=\"${3}\" style=\"width: ${4};\">\n\t\t<span class=\"sr-only\"> ${5: % Complete}</span>\n\t</div>\n</div>\n",
+		"description": "Warning Progress Bar"
+	},
+    "bs3-progress:danger": {
+		"prefix": "bs3-progress:danger",
+		"body": "\n<div class=\"progress\">\n\t<div class=\"progress-bar progress-bar-danger\" role=\"progressbar\" aria-valuenow=\"${1}\" aria-valuemin=\"${2}\" aria-valuemax=\"${3}\" style=\"width: ${4};\">\n\t\t<span class=\"sr-only\"> ${5: % Complete}</span>\n\t</div>\n</div>\n",
+		"description": "Danger Progress Bar"
+	},
+    "bs3-progress-striped:success": {
+		"prefix": "bs3-progress-striped:success",
+		"body": "\n<div class=\"progress\">\n\t<div class=\"progress-bar progress-bar-success progress-bar-striped\" role=\"progressbar\" aria-valuenow=\"${1}\" aria-valuemin=\"${2}\" aria-valuemax=\"${3}\" style=\"width: ${4};\">\n\t\t<span class=\"sr-only\"> ${5: % Complete}</span>\n\t</div>\n</div>\n",
+		"description": "Striped Success Progress Bar"
+	},
+    "bs3-progress-striped:info": {
+		"prefix": "bs3-progress-striped:info",
+		"body": "\n<div class=\"progress\">\n\t<div class=\"progress-bar progress-bar-info progress-bar-striped\" role=\"progressbar\" aria-valuenow=\"${1}\" aria-valuemin=\"${2}\" aria-valuemax=\"${3}\" style=\"width: ${4};\">\n\t\t<span class=\"sr-only\"> ${5: % Complete}</span>\n\t</div>\n</div>\n",
+		"description": "Striped Info Progress Bar"
+	},
+    "bs3-progress-striped:warning": {
+		"prefix": "bs3-progress-striped:warning",
+		"body": "\n<div class=\"progress\">\n\t<div class=\"progress-bar progress-bar-warning progress-bar-striped\" role=\"progressbar\" aria-valuenow=\"${1}\" aria-valuemin=\"${2}\" aria-valuemax=\"${3}\" style=\"width: ${4};\">\n\t\t<span class=\"sr-only\"> ${5: % Complete}</span>\n\t</div>\n</div>\n",
+		"description": "Striped Warning Progress Bar"
+	},
+    "bs3-progress-striped:danger": {
+		"prefix": "bs3-progress-striped:danger",
+		"body": "\n<div class=\"progress\">\n\t<div class=\"progress-bar progress-bar-danger progress-bar-striped\" role=\"progressbar\" aria-valuenow=\"${1}\" aria-valuemin=\"${2}\" aria-valuemax=\"${3}\" style=\"width: ${4};\">\n\t\t<span class=\"sr-only\"> ${5: % Complete}</span>\n\t</div>\n</div>\n",
+		"description": "Striped Danger Progress Bar"
+	}
 }
