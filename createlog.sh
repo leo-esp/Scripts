@@ -5,5 +5,6 @@ cd ~/Workspace
 for var in "$@"
 do
     cd ~/Workspace/$var
-    git status
+    echo $pwd
+    git log --stat --author=leo-esp > ~/Desktop/Logs/$var.log
 done

@@ -1,7 +1,7 @@
-cd ~/Workspace
+#!/bin/bash
 
-for var in "${@:2}"
-do
-    cd ~/Workspace/$var
+for dir in ./*
+do 
+    cd $dir
     git checkout "$1"
 done
