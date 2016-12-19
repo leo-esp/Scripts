@@ -1,7 +1,2 @@
 #!/bin/bash
-
-for dir in ./*
-do 
-    cd $dir
-    git checkout "$1"
-done
+find . -mindepth 1 -maxdepth 1 -not -path "*/\.*" -type d -exec echo "------------------------------------------------------------------------------->PROJECT: "{} \; -exec git --git-dir={}/.git --work-tree=$PWD/{} checkout $1 \;
