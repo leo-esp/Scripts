@@ -1,9 +1,11 @@
 #!/bin/bash
-
-cd ~/Workspace
-
-for var in "$@"
+WS=`basename $PWD`
+for var in `ls -l . | egrep '^d' | awk '{print $9}'`
 do
-    cd ~/Workspace/$var
-    git status
+    cd ~/$WS/$var
+    branch=`git branch | grep \* | cut -d ' ' -f2`
+    echo
+    echo -e "\e[91m${var^^} \e[39m(\e[95m$branch\e[39m) --------------------------------------------------------------------------- \e[91m${var^^}\e[39m"
+    echo 
+    git status $1
 done
