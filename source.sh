@@ -53,7 +53,7 @@ alias 1all='status.sh'
 alias 4all='pull.sh'
 
 alias editbash='code ~/.bashrc'
-alias udpateRailo='docker pull beta-docker-registry.valebroker.com.br/software/railo'
+alias updateRailo='docker pull beta-docker-registry.valebroker.com.br/software/railo'
 alias ws='export WS=Workspace && cdw'
 alias ws2='export WS=Workspace2 && cdw'
 alias ws3='export WS=Workspace3 && cdw'
