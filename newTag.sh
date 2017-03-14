@@ -28,4 +28,13 @@ for tag in $listTags; do
     done
 done
 
-echo "$version.$subversion.$((num+1))"
+
+
+read -p "The new tag is: $version.$subversion.$((num+1)), Are you sure? " -n 1 -r
+echo
+
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    echo "$version.$subversion.$((num+1))"
+    # do dangerous stuff
+fi
