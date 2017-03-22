@@ -1,4 +1,10 @@
-listTags=`git tag | grep $1 | grep '^[a-z]*-[0-9]*.[0-9]*.[0-9]*-[a-z]*'`
+branch_name="$(git symbolic-ref HEAD 2>/dev/null)" ||
+branch_name="(unnamed branch)"     # detached HEAD
+
+branch_name=${branch_name##refs/heads/}
+project_name=${branch_name%%_*}
+
+listTags=`git tag | grep $project_name | grep $1 | grep '^[a-z]*-[0-9]*.[0-9]*.[0-9]*-[a-z]*'`
 version=0
 subversion=0
 num=0
@@ -28,13 +34,28 @@ for tag in $listTags; do
     done
 done
 
+case $2 in
+    v)
+        version=$((version+1))
+        subversion=0
+        num=0 
+        ;;
+    m)
+        subversion=$((subversion+1))
+        num=0        
+        ;;
+    '')
+        num=$((num+1))
+        ;;
+esac
 
+printf '%s\n' "`git tag | grep $1 | grep '^[a-z]*-[0-9]*.[0-9]*.[0-9]*-[a-z]*'`"
 
-read -p "The new tag is: $version.$subversion.$((num+1)), Are you sure? " -n 1 -r
+read -p "The new tag is: $project_name-$version.$subversion.$num-$1, Are you sure? " -n 1 -r
 echo
 
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
-    echo "$version.$subversion.$((num+1))"
-    # do dangerous stuff
+    git tag $project_name-$version.$subversion.$num-$1
+    git push --tags
 fi
