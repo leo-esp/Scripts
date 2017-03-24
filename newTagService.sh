@@ -4,7 +4,7 @@ case $2 in
         cd ~/$WS/corretora-core-front
         ;;
     homebroker)
-        cd ~/$WS/valebroker-html-web
+        cd ~/$WS/valebroker-coldfusion
         ;;
     corretora-core-trusted)
         cd ~/$WS/corretora-core-trusted
@@ -103,12 +103,15 @@ then
             git push --tags
             ;;
         homebroker)
+            cd ~/$WS/valebroker-html-web
             echo -e "\e[91mCriando tag valebroker-html-web\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
+            echo $PWD
             git push --tags
             cd ~/$WS/valebroker-coldfusion
             echo -e "\e[91mCriando tag valebroker-coldfusion\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
+            echo $PWD
             git push --tags  
 
             read -p "Precisa do valebroker-coldfusion-trusted? " -n 1 -r
