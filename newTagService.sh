@@ -2,24 +2,38 @@ WS=`basename $PWD`
 case $2 in
     backoffice)
         cd ~/$WS/corretora-core-front
+        echo -e "\e[32mAtualizando Tags e Branchs...\e[39m"
+        git pull;
         ;;
     homebroker)
         cd ~/$WS/valebroker-coldfusion
+        echo -e "\e[32mAtualizando Tags e Branchs...\e[39m"
+        git pull;
         ;;
     corretora-core-trusted)
         cd ~/$WS/corretora-core-trusted
+        echo -e "\e[32mAtualizando Tags e Branchs...\e[39m"
+        git pull;
         ;;
     valebroker-coldfusion-trusted)
         cd ~/$WS/valebroker-coldfusion
+        echo -e "\e[32mAtualizando Tags e Branchs...\e[39m"
+        git pull;
         ;;
     portal)
         cd ~/$WS/portal
+        echo -e "\e[32mAtualizando Tags e Branchs...\e[39m"
+        git pull;
         ;;
     portal-valemobi)
         cd ~/$WS/valebroker-coldfusion
+        echo -e "\e[32mAtualizando Tags e Branchs...\e[39m"
+        git pull;
         ;;   
     valebroker-html)
         cd ~/$WS/valebroker-html
+        echo -e "\e[32mAtualizando Tags e Branchs...\e[39m"
+        git pull;
         ;;
     '')
         echo "Especifique o serviço"
