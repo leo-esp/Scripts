@@ -100,7 +100,7 @@ fi
 
 printf '%s\n' "`git tag | grep $project_name | grep $1 | grep '^[a-z]*-[0-9]*.[0-9]*.[0-9]*-[a-z]*'`"
 
-echo -e "The new tag is: \e[91m$project_name-$version.$subversion.$num-$1\e[39m, Are you sure(y/n)? "
+echo -e "The new tag is: \e[94m$project_name-$version.$subversion.$num-$1\e[39m , Are you sure(y/n)? "
 read -p "" -n 1 -r
 echo
 
@@ -120,15 +120,14 @@ then
             cd ~/$WS/valebroker-html-web
             echo -e "\e[91mCriando tag valebroker-html-web\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
-            echo $PWD
             git push --tags
             cd ~/$WS/valebroker-coldfusion
             echo -e "\e[91mCriando tag valebroker-coldfusion\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
-            echo $PWD
             git push --tags  
 
-            read -p "Precisa do valebroker-coldfusion-trusted? " -n 1 -r
+            echo -e "\e[93mPrecisa do valebroker-coldfusion-trusted?\e[39m"
+            read -p "" -n 1 -r
             echo
             if [[ $REPLY =~ ^[Yy]$ ]]
             then
@@ -138,7 +137,8 @@ then
                 git push --tags 
             fi      
 
-            read -p "Precisa do portal-valemobi? " -n 1 -r
+            echo -e "\e[93mPrecisa do portal-valemobi?\e[39m"
+            read -p "" -n 1 -r
             echo
             if [[ $REPLY =~ ^[Yy]$ ]]
             then
@@ -162,7 +162,8 @@ then
             git tag $project_name-$version.$subversion.$num-$1
             git push --tags
 
-            read -p "Precisa do portal-valemobi? " -n 1 -r
+            echo -e "\e[93mPrecisa do portal-valemobi?\e[39m"
+            read -p "" -n 1 -r
             echo
             if [[ $REPLY =~ ^[Yy]$ ]]
             then
@@ -186,7 +187,8 @@ then
             git tag $project_name-$version.$subversion.$num-$1
             git push --tags
 
-            read -p "Precisa do valebroker-coldfusion-trusted? " -n 1 -r
+            echo -e "\e[93mPrecisa do valebroker-coldfusion-trusted?\e[39m"
+            read -p "" -n 1 -r
             echo
             if [[ $REPLY =~ ^[Yy]$ ]]
             then
