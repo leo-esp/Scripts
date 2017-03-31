@@ -41,6 +41,8 @@ case $2 in
         ;;
 esac
 
+directory=`basename $PWD`
+
 branch_name="$(git symbolic-ref HEAD 2>/dev/null)" ||
 branch_name="(unnamed branch)"     # detached HEAD
 
@@ -64,13 +66,13 @@ for tag in $listTags; do
         fi
 
         if [ $index = 1 ]; then
-            if [ $subversion -lt "${versionComplete[index]}" ]; then
+            if [ $subversion -lt "${versionComplete[index]}" ] && ["${versionComplete[0]} = $((version))"]; then
                 subversion=${versionComplete[index]}
             fi
         fi
 
         if [ $index = 2 ]; then
-            if [ $num -lt "${versionComplete[index]}" ]; then
+            if [ $num -lt "${versionComplete[index]}" ] && ["${versionComplete[0]} = $((version))"] && ["${versionComplete[1]} = $((subversion))"]; then
                 num=${versionComplete[index]}
             fi
         fi
@@ -100,7 +102,7 @@ fi
 
 printf '%s\n' "`git tag | grep $project_name | grep $1 | grep '^[a-z]*-[0-9]*.[0-9]*.[0-9]*-[a-z]*'`"
 
-echo -e "The new tag is: \e[94m$project_name-$version.$subversion.$num-$1\e[39m , Are you sure(y/n)? "
+echo -e "The new tag is: $directory: \e[96m$project_name-$version.$subversion.$num-$1\e[39m , Are you sure(y/n)? "
 read -p "" -n 1 -r
 echo
 
@@ -110,21 +112,21 @@ then
         backoffice)
             echo -e "\e[91mCriando tag corretora-core-front\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
-            git push --tags
+            git push origin $project_name-$version.$subversion.$num-$1
             cd ~/$WS/corretora-core-back
             echo -e "\e[91mCriando tag corretora-core-back\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
-            git push --tags
+            git push origin $project_name-$version.$subversion.$num-$1
             ;;
         homebroker)
             cd ~/$WS/valebroker-html-web
             echo -e "\e[91mCriando tag valebroker-html-web\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
-            git push --tags
+            git push origin $project_name-$version.$subversion.$num-$1
             cd ~/$WS/valebroker-coldfusion
             echo -e "\e[91mCriando tag valebroker-coldfusion\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
-            git push --tags  
+            git push origin $project_name-$version.$subversion.$num-$1  
 
             echo -e "\e[93mPrecisa do valebroker-coldfusion-trusted?\e[39m"
             read -p "" -n 1 -r
@@ -134,7 +136,7 @@ then
                 cd ~/$WS/valebroker-coldfusion-trusted
                 echo -e "\e[91mCriando tag valebroker-coldfusion-trusted\e[39m"
                 git tag $project_name-$version.$subversion.$num-$1
-                git push --tags 
+                git push origin $project_name-$version.$subversion.$num-$1 
             fi      
 
             echo -e "\e[93mPrecisa do portal-valemobi?\e[39m"
@@ -145,22 +147,22 @@ then
                 cd ~/$WS/portal-valemobi
                 echo -e "\e[91mCriando tag portal-valemobi\e[39m"
                 git tag $project_name-$version.$subversion.$num-$1
-                git push --tags 
+                git push origin $project_name-$version.$subversion.$num-$1 
             fi                     
             ;;
         corretora-core-trusted)
             echo -e "\e[91mCriando tag corretora-core-trusted\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
-            git push --tags
+            git push origin $project_name-$version.$subversion.$num-$1
             ;;
         valebroker-coldfusion-trusted)
             echo -e "\e[91mCriando tag valebroker-coldfusion\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
-            git push --tags
+            git push origin $project_name-$version.$subversion.$num-$1
             cd ~/$WS/valebroker-coldfusion-trusted
             echo -e "\e[91mCriando tag valebroker-coldfusion-trusted\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
-            git push --tags
+            git push origin $project_name-$version.$subversion.$num-$1
 
             echo -e "\e[93mPrecisa do portal-valemobi?\e[39m"
             read -p "" -n 1 -r
@@ -170,22 +172,22 @@ then
                 cd ~/$WS/portal-valemobi
                 echo -e "\e[91mCriando tag portal-valemobi\e[39m"
                 git tag $project_name-$version.$subversion.$num-$1
-                git push --tags 
+                git push origin $project_name-$version.$subversion.$num-$1 
             fi                     
             ;;
         portal)
             echo -e "\e[91mCriando tag portal\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
-            git push --tags
+            git push origin $project_name-$version.$subversion.$num-$1
             ;;
         portal-valemobi)
             echo -e "\e[91mCriando tag valebroker-coldfusion\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
-            git push --tags
+            git push origin $project_name-$version.$subversion.$num-$1
             cd ~/$WS/portal-valemobi
             echo -e "\e[91mCriando tag portal-valemobi\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
-            git push --tags
+            git push origin $project_name-$version.$subversion.$num-$1
 
             echo -e "\e[93mPrecisa do valebroker-coldfusion-trusted?\e[39m"
             read -p "" -n 1 -r
@@ -195,13 +197,13 @@ then
                 cd ~/$WS/valebroker-coldfusion-trusted
                 echo -e "\e[91mCriando tag valebroker-coldfusion-trusted\e[39m"
                 git tag $project_name-$version.$subversion.$num-$1
-                git push --tags 
+                git push origin $project_name-$version.$subversion.$num-$1 
             fi 
             ;;
         valebroker-html)
             echo -e "\e[91mCriando tag valebroker-html\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
-            git push --tags
+            git push origin $project_name-$version.$subversion.$num-$1
             ;;  
     esac
 fi
