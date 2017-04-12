@@ -30,8 +30,13 @@ case $2 in
         echo -e "\e[32mAtualizando Tags e Branchs...\e[39m"
         git pull;
         ;;   
-    valebroker-html)
+    tradesystem)
         cd ~/$WS/valebroker-html
+        echo -e "\e[32mAtualizando Tags e Branchs...\e[39m"
+        git pull;
+        ;;
+    tesouraria)
+        cd ~/$WS/vm2020-front-html
         echo -e "\e[32mAtualizando Tags e Branchs...\e[39m"
         git pull;
         ;;
@@ -48,6 +53,10 @@ branch_name="(unnamed branch)"     # detached HEAD
 
 branch_name=${branch_name##refs/heads/}
 project_name=${branch_name%%_*}
+
+if [ $project_name == "master" ]; then
+    project_name='guide'
+fi
 
 listTags=`git tag | grep $project_name | grep $1 | grep '^[a-z]*-[0-9]*.[0-9]*.[0-9]*-[a-z]*'`
 version=0
@@ -66,13 +75,13 @@ for tag in $listTags; do
         fi
 
         if [ $index = 1 ]; then
-            if [ $subversion -lt "${versionComplete[index]}" ] && ["${versionComplete[0]} = $((version))"]; then
+            if [ $subversion -lt "${versionComplete[index]}" -a "${versionComplete[0]} == $((version))" ]; then
                 subversion=${versionComplete[index]}
             fi
         fi
 
         if [ $index = 2 ]; then
-            if [ $num -lt "${versionComplete[index]}" ] && ["${versionComplete[0]} = $((version))"] && ["${versionComplete[1]} = $((subversion))"]; then
+            if [ $num -lt "${versionComplete[index]}" -a "${versionComplete[0]} == $((version))" -a "${versionComplete[1]} == $((subversion))" ]; then
                 num=${versionComplete[index]}
             fi
         fi
@@ -117,6 +126,7 @@ then
             echo -e "\e[91mCriando tag corretora-core-back\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
+            printf "\nbackoffice: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
             ;;
         homebroker)
             cd ~/$WS/valebroker-html-web
@@ -127,6 +137,7 @@ then
             echo -e "\e[91mCriando tag valebroker-coldfusion\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1  
+            printf "\nhomebroker: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
 
             echo -e "\e[93mPrecisa do valebroker-coldfusion-trusted?\e[39m"
             read -p "" -n 1 -r
@@ -137,6 +148,7 @@ then
                 echo -e "\e[91mCriando tag valebroker-coldfusion-trusted\e[39m"
                 git tag $project_name-$version.$subversion.$num-$1
                 git push origin $project_name-$version.$subversion.$num-$1 
+                printf "\nvalebroker-coldfusion-trusted: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
             fi      
 
             echo -e "\e[93mPrecisa do portal-valemobi?\e[39m"
@@ -148,12 +160,14 @@ then
                 echo -e "\e[91mCriando tag portal-valemobi\e[39m"
                 git tag $project_name-$version.$subversion.$num-$1
                 git push origin $project_name-$version.$subversion.$num-$1 
+                printf "\nportal-valemobi: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
             fi                     
             ;;
         corretora-core-trusted)
             echo -e "\e[91mCriando tag corretora-core-trusted\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
+            printf "\ncorretora-core-trusted: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
             ;;
         valebroker-coldfusion-trusted)
             echo -e "\e[91mCriando tag valebroker-coldfusion\e[39m"
@@ -163,6 +177,7 @@ then
             echo -e "\e[91mCriando tag valebroker-coldfusion-trusted\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
+            printf "\nvalebroker-coldfusion-trusted: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
 
             echo -e "\e[93mPrecisa do portal-valemobi?\e[39m"
             read -p "" -n 1 -r
@@ -173,12 +188,14 @@ then
                 echo -e "\e[91mCriando tag portal-valemobi\e[39m"
                 git tag $project_name-$version.$subversion.$num-$1
                 git push origin $project_name-$version.$subversion.$num-$1 
+                printf "\nportal-valemobi: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
             fi                     
             ;;
         portal)
             echo -e "\e[91mCriando tag portal\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
+            printf "\nportal: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
             ;;
         portal-valemobi)
             echo -e "\e[91mCriando tag valebroker-coldfusion\e[39m"
@@ -188,6 +205,7 @@ then
             echo -e "\e[91mCriando tag portal-valemobi\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
+            printf "\nportal-valemobi: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
 
             echo -e "\e[93mPrecisa do valebroker-coldfusion-trusted?\e[39m"
             read -p "" -n 1 -r
@@ -198,13 +216,21 @@ then
                 echo -e "\e[91mCriando tag valebroker-coldfusion-trusted\e[39m"
                 git tag $project_name-$version.$subversion.$num-$1
                 git push origin $project_name-$version.$subversion.$num-$1 
+                printf "\nvalebroker-coldfusion-trusted: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
             fi 
             ;;
-        valebroker-html)
+        tradesystem)
             echo -e "\e[91mCriando tag valebroker-html\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
-            ;;  
+            printf "\ntradesystem: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
+            ;; 
+        tesouraria)
+            echo -e "\e[91mCriando tag vm2020-front-html\e[39m"
+            git tag $project_name-$version.$subversion.$num-$1
+            git push origin $project_name-$version.$subversion.$num-$1
+            printf "\nvm2020: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
+            echo -e "\e[1;104;103mVerificar se precisa do homebroker\e[0;49;39m"
+            ;;
     esac
 fi
-
