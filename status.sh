@@ -11,5 +11,5 @@ do
     echo -e "\e[91m${var^^} \e[39m(\e[95m$branch\e[39m) $s \e[91m${var^^}\e[39m"
     echo 
     s=$(printf "=%.0s" {1..127})
-    git status $1
+    git status $1 
 done

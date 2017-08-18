@@ -76,9 +76,9 @@ alias ws3='export WS=Workspace3 && cdw'
 alias ws4='export WS=Workspace4 && cdw'
 alias baseGuide='export base=core'
 alias baseAndBank='export base=coreAndBank'
-alias sapo2='sapo up $base --inmemory 201.20.12.171'
 alias todo='code ~/Desktop/TODO.todo'
 alias utils='code ~/Desktop/Utils.txt'
 alias sqlutils='code ~/Desktop/SqlUtils.sql'
 alias fundCache='cache.sh'
 alias hbDev="sed -i 's/443/80/g' ~/$WS/valebroker-html-web/configuration.cfm && sed -i 's/https/http/g' ~/$WS/valebroker-html-web/configuration.cfm && sed -i 's/443/80/g' ~/$WS/valebroker-html-web/configuration-template.cfm && sed -i 's/https/http/g' ~/$WS/valebroker-html-web/configuration-template.cfm"
+# vmobi#212

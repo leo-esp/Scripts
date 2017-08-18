@@ -1,3 +1,13 @@
+
+checkProd() {
+    if [ $1 == 'prod' ] || [ $1 == 'beta' ]; then
+        printf "\n\nService: $2" >> ~/$WS/projectTags.txt
+        printf "\nImagem: docker-registry.valebroker.com.br/valemobi/$2:$3\n" >> ~/$WS/projectTags.txt
+    else
+        printf "\n$2: $3" >> ~/$WS/projectTags.txt
+    fi
+}
+
 WS=`basename $PWD`
 case $2 in
     backoffice)
@@ -58,7 +68,7 @@ if [ $project_name == "master" ]; then
     project_name='guide'
 fi
 
-listTags=`git tag | grep $project_name | grep $1 | grep '^[a-z]*-[0-9]*.[0-9]*.[0-9]*-[a-z]*'`
+listTags=`git tag | grep $project_name | grep $1 | grep '^[a-z]*-[0-9]*\.[0-9]*\.[0-9]*-[a-z]*' | sort --version-sort`
 version=0
 subversion=0
 num=0
@@ -75,14 +85,16 @@ for tag in $listTags; do
         fi
 
         if [ $index = 1 ]; then
-            if [ $subversion -lt "${versionComplete[index]}" -a "${versionComplete[0]} == $((version))" ]; then
+            if [ $subversion -lt "${versionComplete[index]}" ] && [ "${versionComplete[0]} == $((version))" ]; then
                 subversion=${versionComplete[index]}
             fi
         fi
 
         if [ $index = 2 ]; then
-            if [ $num -lt "${versionComplete[index]}" -a "${versionComplete[0]} == $((version))" -a "${versionComplete[1]} == $((subversion))" ]; then
+            if [ $num -lt "${versionComplete[index]}" ] && [ "${versionComplete[0]} == $((version))" ] && [ "${versionComplete[1]} == $((subversion))" ]; then
                 num=${versionComplete[index]}
+            else
+                num=0
             fi
         fi
     done
@@ -109,8 +121,11 @@ if [ $((version)) = 0 ]; then
     num=0
 fi
 
-printf '%s\n' "`git tag | grep $project_name | grep $1 | grep '^[a-z]*-[0-9]*.[0-9]*.[0-9]*-[a-z]*'`"
-
+printf '%s\n' "`git tag | grep $project_name | grep $1 | grep '^[a-z]*-[0-9]*\.[0-9]*\.[0-9]*-[a-z]*' | sort --version-sort`"
+lastTag=`git tag | grep $project_name | grep $1 | grep '^[a-z]*-[0-9]*\.[0-9]*\.[0-9]*-[a-z]*' | sort --version-sort | tail -1`
+echo
+echo $lastTag
+echo
 echo -e "The new tag is: $directory: \e[96m$project_name-$version.$subversion.$num-$1\e[39m , Are you sure(y/n)? "
 read -p "" -n 1 -r
 echo
@@ -123,21 +138,24 @@ then
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
             cd ~/$WS/corretora-core-back
+            git pull
             echo -e "\e[91mCriando tag corretora-core-back\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
-            printf "\nbackoffice: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
+            checkProd $1 'corretora-core-web' $project_name-$version.$subversion.$num-$1
             ;;
         homebroker)
             cd ~/$WS/valebroker-html-web
+            git pull
             echo -e "\e[91mCriando tag valebroker-html-web\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
             cd ~/$WS/valebroker-coldfusion
+            git pull
             echo -e "\e[91mCriando tag valebroker-coldfusion\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1  
-            printf "\nhomebroker: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
+            checkProd $1 $2 $project_name-$version.$subversion.$num-$1  
 
             echo -e "\e[93mPrecisa do valebroker-coldfusion-trusted?\e[39m"
             read -p "" -n 1 -r
@@ -145,11 +163,12 @@ then
             if [[ $REPLY =~ ^[Yy]$ ]]
             then
                 cd ~/$WS/valebroker-coldfusion-trusted
+                git pull
                 echo -e "\e[91mCriando tag valebroker-coldfusion-trusted\e[39m"
                 git tag $project_name-$version.$subversion.$num-$1
                 git push origin $project_name-$version.$subversion.$num-$1 
-                printf "\nvalebroker-coldfusion-trusted: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
-            fi      
+                checkProd $1 'valebroker-coldfusion-trusted' $project_name-$version.$subversion.$num-$1  
+            fi
 
             echo -e "\e[93mPrecisa do portal-valemobi?\e[39m"
             read -p "" -n 1 -r
@@ -157,27 +176,29 @@ then
             if [[ $REPLY =~ ^[Yy]$ ]]
             then
                 cd ~/$WS/portal-valemobi
+                git pull
                 echo -e "\e[91mCriando tag portal-valemobi\e[39m"
                 git tag $project_name-$version.$subversion.$num-$1
                 git push origin $project_name-$version.$subversion.$num-$1 
-                printf "\nportal-valemobi: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
+                checkProd $1 $2 $project_name-$version.$subversion.$num-$1  
             fi                     
             ;;
         corretora-core-trusted)
             echo -e "\e[91mCriando tag corretora-core-trusted\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
-            printf "\ncorretora-core-trusted: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
+            checkProd $1 $2 $project_name-$version.$subversion.$num-$1  
             ;;
         valebroker-coldfusion-trusted)
             echo -e "\e[91mCriando tag valebroker-coldfusion\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
             cd ~/$WS/valebroker-coldfusion-trusted
+            git pull
             echo -e "\e[91mCriando tag valebroker-coldfusion-trusted\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
-            printf "\nvalebroker-coldfusion-trusted: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
+            checkProd $1 $2 $project_name-$version.$subversion.$num-$1  
 
             echo -e "\e[93mPrecisa do portal-valemobi?\e[39m"
             read -p "" -n 1 -r
@@ -185,27 +206,29 @@ then
             if [[ $REPLY =~ ^[Yy]$ ]]
             then
                 cd ~/$WS/portal-valemobi
+                git pull
                 echo -e "\e[91mCriando tag portal-valemobi\e[39m"
                 git tag $project_name-$version.$subversion.$num-$1
                 git push origin $project_name-$version.$subversion.$num-$1 
-                printf "\nportal-valemobi: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
+                checkProd $1 $2 $project_name-$version.$subversion.$num-$1  
             fi                     
             ;;
         portal)
             echo -e "\e[91mCriando tag portal\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
-            printf "\nportal: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
+            checkProd $1 $2 $project_name-$version.$subversion.$num-$1  
             ;;
         portal-valemobi)
             echo -e "\e[91mCriando tag valebroker-coldfusion\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
             cd ~/$WS/portal-valemobi
+            git pull
             echo -e "\e[91mCriando tag portal-valemobi\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
-            printf "\nportal-valemobi: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
+            checkProd $1 $2 $project_name-$version.$subversion.$num-$1  
 
             echo -e "\e[93mPrecisa do valebroker-coldfusion-trusted?\e[39m"
             read -p "" -n 1 -r
@@ -213,23 +236,24 @@ then
             if [[ $REPLY =~ ^[Yy]$ ]]
             then
                 cd ~/$WS/valebroker-coldfusion-trusted
+                git pull
                 echo -e "\e[91mCriando tag valebroker-coldfusion-trusted\e[39m"
                 git tag $project_name-$version.$subversion.$num-$1
                 git push origin $project_name-$version.$subversion.$num-$1 
-                printf "\nvalebroker-coldfusion-trusted: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
+                checkProd $1 $2 $project_name-$version.$subversion.$num-$1  
             fi 
             ;;
         tradesystem)
             echo -e "\e[91mCriando tag valebroker-html\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
-            printf "\ntradesystem: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
+            checkProd $1 $2 $project_name-$version.$subversion.$num-$1  
             ;; 
         tesouraria)
             echo -e "\e[91mCriando tag vm2020-front-html\e[39m"
             git tag $project_name-$version.$subversion.$num-$1
             git push origin $project_name-$version.$subversion.$num-$1
-            printf "\nvm2020: $project_name-$version.$subversion.$num-$1" >> ~/$WS/projectTags.txt
+            checkProd $1 $2 $project_name-$version.$subversion.$num-$1  
             echo -e "\e[1;104;103mVerificar se precisa do homebroker\e[0;49;39m"
             ;;
     esac
